@@ -1,0 +1,83 @@
+name: Publish selected Scaling Editorial documents
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'documents/content-planning.html'
+      - 'documents/flow-chart.html'
+      - 'documents/master-matrix.html'
+      - 'documents/mvp-workplan.html'
+      - '.github/workflows/publish-documents.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scaling-editorial-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      SITE_DIR: ${{ runner.temp }}/scaling-editorial-site
+    steps:
+      - name: Check out sources
+        uses: actions/checkout@v4
+      - name: Prepare only the four approved documents
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          import html
+          import os
+          import shutil
+          documents = [
+              ("flow-chart.html", "Editorial Flow"),
+              ("master-matrix.html", "Trend Matrix"),
+              ("mvp-workplan.html", "Working Plan"),
+              ("content-planning.html", "Content Plan"),
+          ]
+          target = Path(os.environ["SITE_DIR"])
+          target.mkdir(parents=True, exist_ok=False)
+          for filename, _ in documents:
+              source = Path("documents") / filename
+              if not source.is_file() or source.is_symlink():
+                  raise SystemExit(f"Missing or invalid document: {filename}")
+              destination = target / filename
+              shutil.copyfile(source, destination)
+              assert hashlib.sha256(source.read_bytes()).digest() == hashlib.sha256(destination.read_bytes()).digest()
+          links = "\n".join(
+              f'<li><a href="./{html.escape(filename)}">{html.escape(title)}</a></li>'
+              for filename, title in documents
+          )
+          (target / "index.html").write_text(
+              '<!doctype html><html lang="en"><meta charset="utf-8">'
+              '<meta name="viewport" content="width=device-width, initial-scale=1">'
+              '<title>Scaling Editorial — Working documents</title>'
+              '<main><h1>Scaling Editorial</h1><p>Working documents</p><ul>'
+              + links + '</ul></main></html>\n',
+              encoding="utf-8",
+          )
+          (target / ".nojekyll").touch()
+          expected = {filename for filename, _ in documents} | {"index.html", ".nojekyll"}
+          assert {path.name for path in target.iterdir()} == expected
+          PY
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload selected documents
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ env.SITE_DIR }}
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
