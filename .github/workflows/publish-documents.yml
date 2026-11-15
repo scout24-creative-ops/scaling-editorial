@@ -29,7 +29,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     env:
-      SITE_DIR: ${{ runner.temp }}/scaling-editorial-site
+      SITE_DIR: _site
     steps:
       - name: Check out sources
         uses: actions/checkout@v4
