@@ -1,0 +1,92 @@
+{
+  "suchenPlus": {
+    "headline": "Als Erste:r Bescheid wissen, wenn die passende Immobilie online geht",
+    "description": "Mit SuchenPlus siehst du neue Inserate früher und hebst dich bei Vermieter:innen ab.",
+    "button": "Mehr zu SuchenPlus"
+  },
+  "schemaVersion": 2,
+  "defaultSite": "magazine",
+  "displayGroups": {
+    "Immobilienmarkt": "Immobilienmarkt",
+    "Mieten": "Immobilienmarkt",
+    "Kaufen & Verkaufen": "Immobilienmarkt",
+    "Finanzen": "Immobilienmarkt",
+    "Recht & Politik": "Immobilienmarkt",
+    "Wohnen & Architektur": "Immobilienmarkt",
+    "Lifestyle": "Lifestyle"
+  },
+  "sites": {
+    "magazine": {
+      "site": "magazine",
+      "newsEntryId": "1Nj4sEg7f95YuRHmpSbhz8",
+      "newsSlug": "/magazine",
+      "newsPreviewUrl": "https://magazin.sandbox-immobilienscout24.de/",
+      "internalSlugPrefix": "/magazine",
+      "navigation": [
+        {
+          "label": "News",
+          "slug": "/",
+          "internalSlug": "/magazine",
+          "entryId": "1Nj4sEg7f95YuRHmpSbhz8"
+        },
+        {
+          "label": "Immobilienmarkt",
+          "slug": "/immobilienmarkt",
+          "entryId": "3iunhYCyqp2HfThOOCkjHM",
+          "internalSlug": "/magazine/immobilienmarkt"
+        },
+        {
+          "label": "Lifestyle",
+          "slug": "/lifestyle",
+          "entryId": "1KaqeGkaLE7rYJT06IP2fp",
+          "internalSlug": "/magazine/lifestyle"
+        }
+      ],
+      "placementTargets": {
+        "Immobilienmarkt": {
+          "slug": "/magazine/immobilienmarkt",
+          "publicPath": "/immobilienmarkt",
+          "entryId": "3iunhYCyqp2HfThOOCkjHM"
+        },
+        "Lifestyle": {
+          "slug": "/magazine/lifestyle",
+          "publicPath": "/lifestyle",
+          "entryId": "1KaqeGkaLE7rYJT06IP2fp"
+        }
+      },
+      "verifiedAt": "2026-11-13",
+      "scope": "News, Immobilienmarkt and Lifestyle Magazine destinations verified by native CMS reads on 2026-11-13. Eight article copies were reported migrated and read back by the Editorial Publisher. These are sandbox draft targets; browser rendering and production launch are not verified. Preserve separate www targets for explicit existing-page work."
+    },
+    "www": {
+      "site": "www",
+      "newsEntryId": "5zLuKbEgpZyVu1BFJMc2DG",
+      "newsSlug": "/dev-scaling-editorial-news-mvp",
+      "navigation": [
+        {
+          "label": "News",
+          "slug": "/dev-scaling-editorial-news-mvp"
+        },
+        {
+          "label": "Immobilienmarkt",
+          "slug": "/dev-scaling-editorial-immobilienmarkt-mvp"
+        },
+        {
+          "label": "Lifestyle",
+          "slug": "/dev-scaling-editorial-lifestyle-mvp"
+        }
+      ],
+      "placementTargets": {
+        "Immobilienmarkt": {
+          "slug": "/dev-scaling-editorial-immobilienmarkt-mvp",
+          "entryId": "LxsfE8MGOPJPbSOYTR4hw"
+        },
+        "Lifestyle": {
+          "slug": "/dev-scaling-editorial-lifestyle-mvp"
+        }
+      },
+      "verifiedAt": "2026-11-12",
+      "scope": "Retained existing portal; use only for explicitly identified www targets or an explicit request to work in this area."
+    }
+  },
+  "scope": "Default new SE work to Magazine. An explicitly identified existing entry retains its actual site. Resolve navigation and placement only within the selected site. Configuration is not CMS-write, migration or publication authority. Retain all seven internal categories."
+}

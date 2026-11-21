@@ -1,0 +1,14 @@
+interface:
+  display_name: Scaling Editorial – Article Writer
+  short_description: Story Packages in Artikelentwürfe mit Titelbild umsetzen
+  default_prompt: Nutze $scaling-editorial-article-writer und erstelle aus dem beigefügten
+    Story Package das vollständige Article Package samt Titelbild.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

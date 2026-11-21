@@ -1,0 +1,257 @@
+{
+  "source": "User-attached Codex category-overview update, 2026-11-05; common overview source synchronized into LP Builder 0.2.4 and Scaling Editorial 0.7.11",
+  "files": {
+    "component-library.html": "88673cfa0a61bea4183d2426cd12f1f6895decaead2340f13500f7eef0e179b3",
+    "building-policy.md": "14dc75869c30a430ff7ba087a415764204c98ea3101888a5399074f9c7fae714",
+    "contentful-integration.md": "6de1e675cd04cf401961f8fc8f04dd5c8af6a34fdfd5362351609016344f1721"
+  },
+  "bridge_css_reference": {
+    "uploaded_filename": "lpbuilder-bridge(1).css",
+    "sha256": "a54643ac4c9afc7cf137c89e5bd9c4b3568abae81579b6e003cb546750216da3",
+    "ownership": "Renderer-owned external runtime. Plugin updates neither deploy this CSS nor embed CSS/loaders in Contentful HTML."
+  },
+  "extraction": "Only the two changed overview/teaser blocks and the three affected policy sections are synchronized from the new shared source. All article-detail, author, source, recommendation and compact AI-caption rules remain intact. File hashes identify uploaded source; effective merged policy hashes are recorded separately. The native MCP adapter is unchanged. Synchronization is manual.",
+  "retained_policy_overrides": {
+    "hero_caption": "The previously approved compact AI hero-caption rule remains unchanged; supplied Codex policy is merged rather than replacing this override.",
+    "effective_lp_building_policy_sha256": "12da387ac888187174539dc9b03e91a2a2085497454b99cc40bd622a4da0cf55",
+    "effective_se_editorial_policy_sha256": "fb8dfed5049e7fe27b9ea0013f5a58ee21dc61cba77edf787d9d71e00213db91"
+  },
+  "approved_2026_11_05_override": {
+    "scope": "Internal MVP category overview: aligned three-column base and up to six neutral display slots; actual articles preserved. Shared in both plugin reference packages.",
+    "bridge_commits": [
+      "278afe16dbda2699e7cfc13dc62cbb4943aef956",
+      "d1d93fecc8f9a66f902a7831f0a5ab2a2ed6deee"
+    ],
+    "effective_se_policy_sha256": "90bba93f5af3487c78a5f27ee550eb2afad4b6078d37dfbe9538b0389e98e423",
+    "effective_lp_policy_sha256": "247b70f98a69634f5c4619dd3f3b037adddb88bf0d36929990c75c278c8da3c3"
+  },
+  "publisher_ux_sync_2026_11_12": {
+    "source_archive": "SE-Editorial-Publisher-Uebergabe-2026-11-12.zip",
+    "source_project": "LP/LP Builder – Contentful",
+    "source_draft_date": "2026-11-07",
+    "source_library_sha256": "84ef255448513e28f33524b020c1afed4bd3b8748566e861d019dff37bb8ee9c",
+    "source_policy_sha256": "737012899f995a5ba371879f3bdc4bd65956dfbcb1df3566210316fb8438cf7a",
+    "merge": "All 24 complete editorial blocks from the supplied library; retain earlier unrelated blocks. Shared navigation uses the later CMS three-entry contract. Keep existing publisher-specific authority, author registry, compact caption, TEXT_TEST, transport and publication guards.",
+    "historical_source_tests": "4/4 offline refinement tests passed; source tests retain their historical five-entry fixture. No runtime files deployed.",
+    "read_only_current_cms": [
+      {
+        "entryId": "5zLuKbEgpZyVu1BFJMc2DG",
+        "slug": "/dev-scaling-editorial-news-mvp",
+        "version": 8,
+        "htmlSha256": "ef1faa2a359aeab3dc7bdcc556bd2d6574131b9967a3116409975bf8b62e7a3e"
+      },
+      {
+        "entryId": "6OL3zbn7WnUyNqOJTYqpCH",
+        "slug": "/wohngeldreform-2027-geplante-aenderungen",
+        "version": 15,
+        "htmlSha256": "8c8c3c0d2c71df28015357c1df4ef0990ca79a08fc20ee5486acc28399d5a6aa"
+      },
+      {
+        "entryId": "LxsfE8MGOPJPbSOYTR4hw",
+        "slug": "/dev-scaling-editorial-immobilienmarkt-mvp",
+        "version": 19,
+        "htmlSha256": "7e76f4d147af6dcfbfa738de732df5762c0a4e435cdf440b51179d4aaee3c817"
+      },
+      {
+        "entryId": "22O849wA6VAVgxOYVT9zvB",
+        "slug": "/dev-scaling-editorial-wohnrecht-mvp",
+        "version": 17,
+        "htmlSha256": "2f1c221740beaae75524e9fe314294f1f9273d1ee5d1cccc6d3371c1cfdd1413"
+      }
+    ],
+    "current_navigation": [
+      "News",
+      "Immobilienmarkt",
+      "Lifestyle"
+    ],
+    "scope": "Skill update only; no CMS write or publication. No new visual acceptance claimed.",
+    "effective_files": {
+      "SKILL.md": "c761877342f41b56e1f85766305ea130cf2eaafa5de6539c0573793f8f99771e",
+      "references/component-library.html": "61daeeb3f465e9a0556443a146a4512a2dbab3479c0dac15a2c2f7106360f644",
+      "references/editorial-policy.md": "4535ef8b86f13f1487530d4e4a2a1725eed75b48e7461f621c5261b453d3fee4",
+      "references/portal-ux.md": "e5bd1ef551f1e91ff2a0dfa8ad4c754c6da229fe1e37348804020fa19c4bc006",
+      "references/portal-config.json": "90a3e6d2291e0019be7b65327e39c7d7859526ad66601c54e87cc343e38619f5",
+      "references/execution-modes.md": "d2088deaf03b7f2cf4d789597be3c33adcd8264002e46c9f5ed4ad59f729a0b9",
+      "references/contentful-integration.md": "864516081101e01687a42256cb173bb3129d3e4780c51b0117d3d79727c6408f"
+    }
+  },
+  "publisher_image_precedence_2026_11_12": {
+    "reason": "Align selected-image fidelity with explicit Article Package instructions after the Enova draft used TEXT_TEST despite a selected real image. No CMS mutation in this update.",
+    "rule": "Explicit placeholder request first; otherwise supplied selected safe real image; approved TEXT_TEST fallback only without supplied real image. Invalid/ambiguous assets remain ASK.",
+    "effective_files": {
+      "SKILL.md": "d0593cd5f91e5e9b127a330b40710854792dd0683efb11a198cc0d347cd98efd",
+      "references/editorial-policy.md": "93beed49cb0713562be0426b87571e14bbc39dd3fa53c81ff80dd1594ba30972",
+      "references/execution-modes.md": "ce27f102c03db3605bdd290c05dda17ce0469b086fd54541bbb70defb7467297"
+    }
+  },
+  "publisher_placement_routing_2026_11_12": {
+    "reason": "Align requested default rubric placement with the accepted three-entry navigation; retain all internal categories and legacy entries.",
+    "mapping": "All six non-Lifestyle categories -> existing Immobilienmarkt overview; Lifestyle -> existing Lifestyle overview. Explicit other targets retain separate scope. No automatic CMS backfill or deletion.",
+    "effective_files": {
+      "SKILL.md": "913f0b2bfa952ba477581b8d34f87bb314955efe7eb2ac180b4312a60101f7f9",
+      "references/editorial-policy.md": "0290908500fe20409707705f7c334c5d42fdc711731124c75268f39c3bb4e55c",
+      "references/portal-ux.md": "02f1af108be12ec6f642fd993dd0fdc0c25fb6a3102cb14155c4938cbddfca43",
+      "references/portal-config.json": "a86431b75347f2c26ccd6792a11093e6ca79ae0b87c9d835087050988f9313e6"
+    }
+  },
+  "publisher_seo_handoff_2026_11_12": {
+    "source_pages": [
+      "https://wiki.scout24.com/spaces/product-intelligence/pages/69148/qa-run-seo",
+      "https://wiki.scout24.com/spaces/product-intelligence/pages/57036/technical-set-up"
+    ],
+    "scope": "Accept separate Writer SEO metadata with explicit current CMS-storage limitations; external article-source rel=nofollow as project policy. No CMS writes, runtime deployment, 500-word limit, mandatory IS24-data restriction or unrelated SEO implementation activated.",
+    "schema_verified": "Native create/update schemas reviewed 12.11.2026: mainTitle/slug/html etc.; no dedicated seoTitle/metaDescription.",
+    "effective_files": {
+      "SKILL.md": "e9c8553b9fb72a5fac7e5299ecb9e63470ee2d80ed055e96c8269bdc36f97414",
+      "references/editorial-policy.md": "a7420defdd01251bed63ed78e91c52f2fc6d227daae9780e32845d51ccf8b648",
+      "references/contentful-integration.md": "a6c92cfcb9232968d46c998df5ca2c847847930b6a2ef7a82aa0ebfb0018381f"
+    }
+  },
+  "publisher_magazine_routing_2026_11_13": {
+    "scope": "Update the personal Publisher rulebase and site-specific target configuration. New SE work defaults to Magazine; explicitly identified existing www pages remain in their actual area. No automatic content migration, navigation rewrite, publication or runtime deployment.",
+    "channel_source": "https://scout24.slack.com/archives/C0C6K7R4VRT/p1794495283198679",
+    "routing_source": "https://scout24.slack.com/archives/C0C6K7R4VRT/p1793892793599469",
+    "verified_magazine_home": {
+      "entryId": "1Nj4sEg7f95YuRHmpSbhz8",
+      "slug": "/magazine",
+      "site": "magazine",
+      "version": 9,
+      "publishedVersion": null,
+      "previewUrl": "https://magazin.sandbox-immobilienscout24.de/",
+      "htmlBytes": 16830,
+      "htmlSha256": "ef1faa2a359aeab3dc7bdcc556bd2d6574131b9967a3116409975bf8b62e7a3e",
+      "verification": "Read and identical-title/full-HTML draft save by Entry ID, followed by complete unchanged-content read-back; not a visible content/design change or browser rendering check."
+    },
+    "creation_gap": {
+      "schema": "Historical older Contentful LPBuilder MCP (Dev) schema, before the new app was connected: no site/content-type input or separate Magazine action.",
+      "prefixed_attempt_error": "Slugs starting with \"/magazine\" are reserved for Magazine pages; use site \"magazine\".",
+      "unprefixed_test_entryId": "6e9gIijSmDJV1OMLbwztej",
+      "unprefixed_test_site": "www",
+      "rule": "Do not repeat unsupported writes or create www substitutes. Recheck live schemas on a later request."
+    },
+    "unresolved": "Magazine category and article migration targets, actual production launch, visual acceptance and independent Content Type/environment verification remain open.",
+    "validation": "Skill validation, JSON/reference checks, retained www mappings/seven categories/author-SEO policy/component-image preservation checks, four offline workflow scenarios and direct existing-Magazine draft save/read-back passed.",
+    "effective_files": {
+      "SKILL.md": "f5cc6688d5b0a0ec2edc13a22b78e91aa41059123f481708be355f227326e0f1",
+      "references/portal-config.json": "4e08bd82286dc3ec59fc9fd43a54d049deec9c7d5958c8f35e4d6e03f49ec28b",
+      "references/portal-ux.md": "57de912f57895f730cd1014ff8d814b322f6ce4a8a88686f00e2404b51df51e7",
+      "references/contentful-integration.md": "da7ef07d5213588dd63a7f9b93d48308c67169efecb64dfbe4fb736faceac79d",
+      "references/editorial-policy.md": "87d61e06c192db65c2b68a18529822a2caa67b77e40f49c60690252534e54800",
+      "references/component-library.html": "61daeeb3f465e9a0556443a146a4512a2dbab3479c0dac15a2c2f7106360f644",
+      "references/execution-modes.md": "ce27f102c03db3605bdd290c05dda17ce0469b086fd54541bbb70defb7467297"
+    }
+  },
+  "publisher_new_mcp_adapter_2026_11_13": {
+    "app": "Contentful Landing Page Builder MCP",
+    "app_id": "asdk_app_6af7129117a08191b0edc9d117a1875f",
+    "native_namespace": "contentful_landing_page_builder_mcp",
+    "owner_message": "https://scout24.slack.com/archives/D0A2J2S5GMS/p1794579034914839",
+    "documentation_message": "https://scout24.slack.com/archives/C0C6K7R4VRT/p1794568227039729",
+    "reviewed_source_files": {
+      "guardrails.md": "F0CJAKY6NJC",
+      "04-seo-guide.md": "F0CHE9Y6YCW",
+      "08-mcp-workflow.md": "F0CH0T9AQ0P",
+      "03-contentful-modeling.md": "F0CJAKYQ51N",
+      "instructions.md": "F0CH0T9TVHV"
+    },
+    "merge_scope": "Integrate native site routing, model distinction and documented internal/public path mapping. Preserve SE canonical layout, author/image/source rules, explicit new-SE Magazine default and action authority. Generic AEM/marketing module, GPT Actions wrapper, mandatory Storybook and form instructions are not SE replacements. SEO model existence does not add unsupported native SEO fields.",
+    "schema_evidence": "Native get/create/update expose site enum www|magazine. The omitted value defaults to www. No dedicated SEO metadata or image asset upload inputs.",
+    "read_only_evidence": {
+      "entryId": "1Nj4sEg7f95YuRHmpSbhz8",
+      "site": "magazine",
+      "slug": "/magazine",
+      "version": 9,
+      "publishedVersion": null,
+      "htmlBytes": 16830,
+      "htmlSha256": "ef1faa2a359aeab3dc7bdcc556bd2d6574131b9967a3116409975bf8b62e7a3e",
+      "previewUrlReturned": false
+    },
+    "not_verified": "No create/update/lifecycle operation through the new app. No browser check, environment proof, category migration or live-production acceptance. Agent app selection must be updated separately.",
+    "effective_files": {
+      "SKILL.md": "6b78a948a8ceb463f3faa42a29df01c76f7026ecc5f3f33e853ba2cc3d9ca729",
+      "references/contentful-integration.md": "d28e2c87b2b5a2bc12231c91a7d695a1730bc4335f4dd177f4b30fc49fe79a18"
+    },
+    "validation": "Personal skill validator passed; JSON parsed; unrelated skill and canonical component/policy/config/image hashes unchanged; five offline routing/authority/readback/link scenarios reviewed. Magazine relative-route and lifecycle-result wording harmonized. No new-adapter CMS write or browser check."
+  },
+  "publisher_magazine_targets_2026_11_13": {
+    "scope": "Complete the new Magazine placement/navigation configuration after the user-supplied Editorial Publisher migration report. No CMS writes, agent instruction changes, publishing or browser checks in this follow-up.",
+    "migration_report": "User supplied successful migration/read-back report for ten new drafts (eight articles, two category overviews) and an existing homepage link update. No www source changed; all targets reported publishedVersion null. Browser calls were blocked by a connection tunnel 403, not a target HTTP response.",
+    "direct_follow_up_reads": {
+      "News": {
+        "entryId": "1Nj4sEg7f95YuRHmpSbhz8",
+        "slug": "/magazine",
+        "site": "magazine",
+        "version": 10,
+        "publishedVersion": null,
+        "htmlBytes": 16748,
+        "htmlSha256": "5961b0d3c93d9ed3629a2e8388af7c5f4a22ca607daee8b3d0bd9074988869f4"
+      },
+      "Immobilienmarkt": {
+        "entryId": "3iunhYCyqp2HfThOOCkjHM",
+        "slug": "/magazine/immobilienmarkt",
+        "site": "magazine",
+        "version": 1,
+        "publishedVersion": null,
+        "htmlBytes": 12341,
+        "htmlSha256": "66bc038f634cbee1e32c0029e5193fb5a799cd920f7f1fc587f7a62315da58e0"
+      },
+      "Lifestyle": {
+        "entryId": "1KaqeGkaLE7rYJT06IP2fp",
+        "slug": "/magazine/lifestyle",
+        "site": "magazine",
+        "version": 1,
+        "publishedVersion": null,
+        "htmlBytes": 11482,
+        "htmlSha256": "23303dcb75c3672ea5a885a9860fc9de7e007d5f96c093c365b3a92c8f8cb0dd"
+      }
+    },
+    "reported_article_targets": [
+      {
+        "sourceEntryId": "6OL3zbn7WnUyNqOJTYqpCH",
+        "entryId": "70nMd8ePoYCFrDQIkcljfE",
+        "slug": "/magazine/wohngeldreform-2027-geplante-aenderungen"
+      },
+      {
+        "sourceEntryId": "Ik1AQUW6OAxQCqgnkcq0J",
+        "entryId": "12HGfrWl6LePhzbRBsHVoO",
+        "slug": "/magazine/energiewende-miete-eigentum-wer-entscheidet"
+      },
+      {
+        "sourceEntryId": "45DjdzK0dQkNOXwIDOc4zh",
+        "entryId": "6yD6BhXwx31YGK4Tcqv14V",
+        "slug": "/magazine/heizoel-preissprung-heizkostenrechnung"
+      },
+      {
+        "sourceEntryId": "5brtogQ8wFhVwFlkP9vli7",
+        "entryId": "1XXUipfrXfQRg1Ejs5JvQo",
+        "slug": "/magazine/haus-ohne-zentralheizung-ingolstadt"
+      },
+      {
+        "sourceEntryId": "Q9IRHEZmuUMcEcnVB6c3c",
+        "entryId": "6CV2Cay7Wz0DSLLzKsQX59",
+        "slug": "/magazine/baugenehmigungen-baupipeline"
+      },
+      {
+        "sourceEntryId": "lBpS4FSuf7W0TQ2i5tBHt",
+        "entryId": "4pTiQnSCj8izdUxwSz15kR",
+        "slug": "/magazine/the-weeknd-rekordtour-abschlussbilanz"
+      },
+      {
+        "sourceEntryId": "33XASLGn2AiGyI5lEnpXOK",
+        "entryId": "zy4ZpHGasOUPXPlv5cxDm",
+        "slug": "/magazine/hape-kerkeling-reaktion-petition"
+      },
+      {
+        "sourceEntryId": "3L0x9hUyWgsVTRlTJGOw3k",
+        "entryId": "3y9fa8c47UrnHmI0vfHgHL",
+        "slug": "/magazine/immobilienkauf-digital-enova"
+      }
+    ],
+    "evidence_limits": "Article creation/full-content preservation was reported by the executing Editorial Publisher, not independently reread here. Direct reads here verify home and category identity, full returned HTML, navigation and draft state. No target HTTP/visual or production acceptance.",
+    "effective_files": {
+      "references/portal-config.json": "cea02a6ca3e5667353a056ef3d2e19e9665141026f239e1fe50a97c395131023",
+      "references/portal-ux.md": "c0d60bc5c5089e28274e44e602170346ebf1216381af25d57a1e40a0a8d068c4",
+      "references/contentful-integration.md": "664cf51c231145cd27539719d851dfb69a1321e3e89eaff979aa24c2da808cc0"
+    }
+  }
+}

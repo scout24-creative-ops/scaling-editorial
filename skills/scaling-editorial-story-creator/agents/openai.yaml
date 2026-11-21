@@ -1,0 +1,14 @@
+interface:
+  display_name: Scaling Editorial – Story Creator
+  short_description: Signale prüfen und vollständige Story Packages liefern
+  default_prompt: Nutze $scaling-editorial-story-creator und entwickle das beigefügte
+    Signal Package zu einer belegten Story mit herunterladbarem Übergabepaket.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
