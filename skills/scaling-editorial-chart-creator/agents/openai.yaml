@@ -1,0 +1,14 @@
+interface:
+  display_name: Scaling Editorial – Chart Creator
+  short_description: Erstellt überprüfbare PNG-Diagramme für Scaling Editorial.
+  default_prompt: Nutze $scaling-editorial-chart-creator, um aus diesen belegten Daten
+    ein Diagramm als PNG mit Quellenangabe und Alt-Text zu erstellen.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

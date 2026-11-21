@@ -1,0 +1,15 @@
+interface:
+  display_name: Scaling Editorial – Editorial Publisher
+  short_description: Artikel einbauen, Packages und Signalregister pflegen
+  default_prompt: Nutze $scaling-editorial-publisher für den Magazin-Einbau des ausgewählten
+    Artikels mit News-/Rubrikteasern und Wiki-Dokumentation der zugehörigen Packages
+    samt Signalregister; kläre zuerst Autorin und Bild-URL.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

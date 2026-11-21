@@ -1,0 +1,14 @@
+interface:
+  display_name: Scaling Editorial – Trend Finder
+  short_description: Web-Themen entdecken und Signal Packages übergeben
+  default_prompt: Nutze $scaling-editorial-trend-finder, um aktuelle Themen für Scaling
+    Editorial zu recherchieren und qualifizierte Signal Packages als Downloads bereitzustellen.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

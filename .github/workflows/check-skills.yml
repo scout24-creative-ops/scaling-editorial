@@ -1,0 +1,26 @@
+name: Check Scaling Editorial skill packages
+on:
+  pull_request:
+    paths:
+      - 'skills/**'
+      - '.github/workflows/check-skills.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+      - '.github/workflows/check-skills.yml'
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify package names, dependencies, complete file lists and checksums
+        run: python3 skills/check.py

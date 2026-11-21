@@ -1,0 +1,14 @@
+interface:
+  display_name: Scaling Editorial – Image Creator
+  short_description: Editorial images with original Frontify AI labels
+  default_prompt: Use $scaling-editorial-image-creator to create one clear title image
+    from my final headline, intro and complete article.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
