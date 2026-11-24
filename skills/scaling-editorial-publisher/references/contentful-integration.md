@@ -32,6 +32,8 @@ For the commissioned standard three-image intake, check the complete payload and
 
 After confirmed article storage/read-back, update News then the matching rubric under required-inputs-and-placement.md. Read each target freshly before update and fully afterward. Preserve the other unique articles/order through canonical reflow and deduplicate verified identities. Never claim completed integration if only the article was saved. An overview failure leaves the confirmed article as a reported partial result; it is not authorization for rollback or replacement creation.
 
+For canonical article pages also run `scripts/check_article_html.py` before writing and after the full read-back with `--expected-html`. Follow article-html-checks.md for its scope, existing-page baseline and reported warnings. This is a local structural/image-attribute check, not SEO metadata persistence or a browser/performance test.
+
 ## HTML integrity and transport limit
 
 Compute exact UTF-8 bytes and SHA-256 with an available execution tool before sending complete inline html; never estimate or invent checksums. Compare full source and returned HTML and actual integrity values after the write when computable; otherwise report the concrete unperformed integrity check.

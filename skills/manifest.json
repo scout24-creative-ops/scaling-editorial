@@ -183,8 +183,8 @@
       "requires_skills": [],
       "files": {
         "SKILL.md": {
-          "sha256": "3f8a7ecae8dbe95d86369d5778e5c7a22137aaab7a11c70278b9a1912d2553e9",
-          "bytes": 21578,
+          "sha256": "5c831f5e33e4e8d7fb80fca25a6d51b32158e52d3c684855713a8723a482e099",
+          "bytes": 22281,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -197,19 +197,24 @@
           "bytes": 1210,
           "mode": "100644"
         },
+        "references/article-html-checks.md": {
+          "sha256": "bd8b17fa0ec18fb6f00c72c8e5441e8dbe7bfa94a0e43f18fad71dd5181a8fbc",
+          "bytes": 4427,
+          "mode": "100644"
+        },
         "references/author-dialog.md": {
           "sha256": "1d36c915eb2aa701a406d26dd2a7b71afbc18e99681d3b9dad4605fc1f290bd5",
           "bytes": 11159,
           "mode": "100644"
         },
         "references/component-library.html": {
-          "sha256": "1d846b60ac5e6b67acdc7ec7d16b0a201502a27cc60f9cebbf44460ee1199d98",
-          "bytes": 77491,
+          "sha256": "824a5ce3c7fa6adb6e3305061d70b13d717899443138633360f1cf65b42a77e1",
+          "bytes": 77554,
           "mode": "100644"
         },
         "references/contentful-integration.md": {
-          "sha256": "49c26fefcd0876e73c0ea75af296309152726fc850b5b6c6e06a2678259105c9",
-          "bytes": 9884,
+          "sha256": "d2eac1697ae737014313fed9823704f56e8282da98d7a921aa4003562ff2c514",
+          "bytes": 10223,
           "mode": "100644"
         },
         "references/editorial-policy.md": {
@@ -238,8 +243,8 @@
           "mode": "100644"
         },
         "references/portal-ux.md": {
-          "sha256": "df287a6d0a5d11d6d4f0e3febd8599e3da7b7113c27491b52cb1b06b7f82c6aa",
-          "bytes": 25315,
+          "sha256": "4bee81f2c79dd6fddceb374f258cf5cdce0c79e22468f2efb1f764edee37aa41",
+          "bytes": 25730,
           "mode": "100644"
         },
         "references/publisher-contract.md": {
@@ -265,6 +270,11 @@
         "references/wiki-production-records.md": {
           "sha256": "90e168e01d13c6a93c786f289181eb0c21cf65f978b54c74f8568e0d0a956998",
           "bytes": 16010,
+          "mode": "100644"
+        },
+        "scripts/check_article_html.py": {
+          "sha256": "24c7ac18ec075b418cc7058a831758702d9688d536829d7f22176aa04e029979",
+          "bytes": 8151,
           "mode": "100644"
         },
         "scripts/check_image_roles.py": {
