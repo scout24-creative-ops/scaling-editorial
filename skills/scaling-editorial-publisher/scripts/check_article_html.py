@@ -34,7 +34,8 @@ class Article(HTMLParser):
                     'body': 'lpb-editorial-article__body' in parents,
                     'duplicates': len(attrs) != len(d),
                 })
-            if ('lpb-editorial-article' in parents and len(tag) == 2
+            if ('lpb-editorial-article' in parents
+                    and 'lpb-editorial-author-dialog' not in parents | classes and len(tag) == 2
                     and tag[0] == 'h' and tag[1] in '123456'):
                 self.headings.append({'level': int(tag[1]), 'text': '',
                                       'hidden': any('hidden' in a or a.get('aria-hidden') == 'true'
@@ -58,6 +59,8 @@ class Article(HTMLParser):
                                   for t, _ in self.stack)
                 and any('lpb-editorial-article' in a.get('class', '').split()
                         for _, a in self.stack)
+                and not any('lpb-editorial-author-dialog' in a.get('class', '').split()
+                            for _, a in self.stack)
                 and not any(t in IGNORED for t, _ in self.stack)):
             self.headings[-1]['text'] += data
 

@@ -4,7 +4,7 @@ Prüfe neue und ausdrücklich vollständig überarbeitete Artikelseiten vor dem 
 
 ## Eingabe vorbereiten
 
-- Genau eine H1 im inneren `lpb-editorial-article`, vor den übrigen Artikelüberschriften. Kapitel beginnen mit H2; weitere Ebenen ohne Sprung verschachteln. Überschriften nicht erfinden, um eine Prüfung zu erfüllen.
+- Genau eine H1 im inneren `lpb-editorial-article`, vor den übrigen Artikelüberschriften. Kapitel beginnen mit H2; weitere Ebenen ohne Sprung verschachteln. Die separate Überschrift im kanonischen Autoren-Dialog gehört nicht zur Artikelhierarchie; dessen Bilder werden weiterhin geprüft. Überschriften nicht erfinden, um eine Prüfung zu erfüllen.
 - Im vollständigen `lpb-editorial-ux--article` erhalten alle Bilder positive ganzzahlige `width`-/`height`-Attribute und ein `alt`-Attribut. Die vorhandenen rollenabhängigen Abmessungen bleiben bestehen; HTML-Abmessungen belegen keine tatsächlichen Dateipixel.
 - Verwende für Titelbild und informative Bilder im Artikelkörper aussagekräftige übergebene Alttexte. Fehlenden Kontext gezielt klären, keine Bildbeschreibung erfinden. Leeres `alt` bei redundanten/dekorativen Sidebar-Bildern ist zulässig. Für ein ausdrücklich bestätigtes dekoratives Bild im Artikelkörper darf seine exakte bestehende URL mit `--decorative-image-src` übergeben werden; diese Ausnahme gilt nie für das Titelbild. Keine neuen HTML-Attribute zur Umgehung einführen.
 - Das Titelbild in der bestehenden Artikel-Bildfigur erhält `loading="eager" fetchpriority="high"`. Alle anderen Bilder der aktuellen Artikelkomposition bleiben `loading="lazy"`. Priorisiere nicht sämtliche Bilder. Keine Head-Preloads, neuen Bildquellen, Layout-/CSS- oder Frontend-Änderungen daraus ableiten.

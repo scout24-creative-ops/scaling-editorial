@@ -82,6 +82,17 @@ class ArticleHTML(unittest.TestCase):
         html = article().replace('<header>', '<template><h1>Vorlage</h1></template><header>')
         self.assertTrue(guard.check(html)['ok'])
 
+    def test_canonical_author_dialog_heading_is_separate_but_portrait_is_checked(self):
+        library = (SCRIPT.parents[1] / 'references/component-library.html').read_text()
+        dialog = library.split('<!-- LP_COMPONENT_START: scaling-editorial-author-dialog -->')[1].split('<!-- LP_COMPONENT_END: scaling-editorial-author-dialog -->')[0]
+        html = article().replace('</header>', '</header>' + dialog)
+        result = guard.check(html, expected_html=html)
+        self.assertTrue(result['ok'], result)
+        self.assertEqual(result['checkedHeadings'], 5)
+        self.assertEqual(result['signature']['headings'][0]['text'], 'Eine belegte Nachricht')
+        bad_dialog = dialog.replace('width="240"', 'width="0"')
+        self.assertFalse(guard.check(article().replace('</header>', '</header>' + bad_dialog))['ok'])
+
     def test_unrelated_page_heading_does_not_pollute_article_check(self):
         self.assertTrue(guard.check('<nav><h2>Navigation</h2></nav>' + article())['ok'])
 
