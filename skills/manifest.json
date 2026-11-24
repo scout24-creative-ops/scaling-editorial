@@ -318,8 +318,8 @@
       "requires_skills": [],
       "files": {
         "SKILL.md": {
-          "sha256": "960bb6cfd9648407c921f8bce8d8f3861b1d72371f59f5997091853902023542",
-          "bytes": 6538,
+          "sha256": "528478816876b487277577fc77edaf9a7f3ed2af1c1458938eeb7c5d66aec0d7",
+          "bytes": 6950,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -333,13 +333,13 @@
           "mode": "100644"
         },
         "references/chat-output.md": {
-          "sha256": "13367eb68dc4484f089d6aa76a046588c8106f99c4f5d381a15c637e68f3c262",
-          "bytes": 6701,
+          "sha256": "0cce0faf13d13ad427332b3ed2a666be63f1a1fad0c732ff9db4391472d0fd3d",
+          "bytes": 6921,
           "mode": "100644"
         },
         "references/editorial-policy.md": {
-          "sha256": "8e67ac6deb0593fb90796d7c3c27df926c7d1068afa0fb4593fb9895a37e5e74",
-          "bytes": 18352,
+          "sha256": "459a7c77528a998fb0490cec324cfe86d11601e30c758a3d66ed3ce40ddfbf51",
+          "bytes": 21956,
           "mode": "100644"
         },
         "references/signal-package.md": {
@@ -348,8 +348,8 @@
           "mode": "100644"
         },
         "references/wiki-access.md": {
-          "sha256": "37a2fb19458c274f244ae0b9ae58e40515f211ce59a064564dbef288051ac3a1",
-          "bytes": 4012,
+          "sha256": "acf1e4e9ed75958aabb82ea086ecd78a4e8d8e16ebc287b21427a49fc260dee2",
+          "bytes": 4577,
           "mode": "100644"
         },
         "scripts/render_signal_package.py": {

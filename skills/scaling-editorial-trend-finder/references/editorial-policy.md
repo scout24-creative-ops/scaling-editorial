@@ -11,6 +11,7 @@
 - Ergänzende Wissensbasis
 - Wiki-Nutzung bei Rechercheaufgaben
 - Redaktioneller Suchraum
+- Quellensteuerung aus der Taxonomy
 - Standardworkflow für offene Themenrecherche
 - Quellen- und Evidenzstandard
 - Journalistische Bewertung
@@ -81,7 +82,7 @@ Bei Beginn jeder neuen Rechercheaufgabe:
 
 Lies über Scout Wiki die Seite **„Taxonomy“** für redaktionelle Themenorientierung, Rubriken, Themen-Tags und ausdrücklich dokumentierte Themenausschlüsse. Bei unmittelbaren Folgefragen darf der bereits gelesene Stand weiterverwendet werden, sofern keine Aktualisierung erforderlich ist.
 
-Führe die eigentliche Themen- und Signalrecherche weiterhin ausschließlich im öffentlich zugänglichen Web durch. Die Taxonomie ist eine offene Orientierung; weitere passende Themen und geeignete Webquellen sind erlaubt.
+Führe die eigentliche Themen- und Signalrecherche weiterhin ausschließlich im öffentlich zugänglichen Web durch. Die Taxonomie ist eine offene Themenorientierung; ihre ausdrücklich benannten Pflichtquellen und Quellenausschlüsse werden nach dem Abschnitt „Quellensteuerung aus der Taxonomy“ verarbeitet. Weitere passende Themen und geeignete, nicht ausgeschlossene Webquellen bleiben ausdrücklich erlaubt.
 
 Lies vor der finalen Auswahl die Seite **„Signalregister“** und gleiche die eigenständig recherchierten und bewerteten Kandidaten mit der dokumentierten Signalhistorie ab.
 
@@ -115,6 +116,17 @@ sowie ausreichender belastbarer Evidenz für die weitere Storyentwicklung.
 
 Nicht jedes Thema muss überraschend sein. Auch hilfreiche Servicegeschichten können journalistisch stark sein.
 
+## Quellensteuerung aus der Taxonomy
+
+Lies zu Beginn jeder neuen Recherche die vollständige aktuelle Taxonomy einschließlich der Bereiche **Verbindlich zu prüfende Recherchequellen** und **Ausgeschlossene Recherchequellen**. Bewahre den tatsächlich gelesenen Stand intern. Konkrete Domains und redaktionelle Suchhinweise stehen ausschließlich dort, nicht als zweite Liste im Skill. Bei unmittelbaren Folgefragen darf ein tatsächlich gelesener Stand nur weiterverwendet werden, wenn keine Aktualisierung erforderlich ist.
+
+- **Pflichtquellen zusätzlich prüfen:** Recherchiere bei jedem zum Suchauftrag passenden Eintrag gezielt auf der genannten Website nach relevanten aktuellen Inhalten und lies geeignete Fundstellen. Beachte Rubrik, Suchraum und Suchhinweis. Die Pflicht betrifft die Prüfung der Quelle, nicht die Übernahme eines Themas, einer Headline oder eines bestimmten Artikels. Eine Website muss nicht vollständig durchgelesen werden. Bei engeren Aufträgen unpassende Pflichtquellen nicht künstlich einbeziehen.
+- **Freie Webrecherche beibehalten:** Die Pflichtliste ist weder abschließend noch eine Beschränkung auf erlaubte Quellen. Suche zusätzlich eigenständig im öffentlich zugänglichen Web nach weiteren geeigneten Originalquellen, Berichten und Themen. Eine leere Pflichtliste bedeutet freie Recherche nach den bestehenden Regeln; eine belegte Quelle außerhalb der Liste ist nicht allein deshalb unzulässig. Die Qualitäts-, Aktualitäts- und Evidenzmaßstäbe bleiben für alle Quellen gleich.
+- **Ausgeschlossene Websites beachten:** Rufe ausgeschlossene Websites nicht gezielt auf und verwende ihre Inhalte weder als Recherchegrundlage noch als Beleg. Zufällig angezeigte Treffer oder Such-Snippets daraus nicht verwerten. Prüfe die tatsächliche Domain eines Links vor dem gezielten Abruf; eine ähnliche Schreibweise ist keine Domain-Übereinstimmung. Ein Domain-Eintrag gilt für die gesamte genannte Website einschließlich ihrer www-Variante, nicht automatisch für andere Domains derselben Organisation. Beachte ausdrücklich dokumentierte Test- oder Zeitbegrenzungen. Bei einem widersprüchlichen Eintrag in beiden Listen den Ausschluss beachten und den Konflikt benennen; unabhängige Recherche fortsetzen.
+- **Zugriff und Prüfung wahrheitsgemäß behandeln:** Nicht erreichbare Pflichtquellen, fehlende Listenbereiche und Lesefehler konkret benennen. Unterscheide eine Suche ohne passende Fundstelle, einen fehlgeschlagenen Abruf und tatsächlich gelesenen Inhalt. Behaupte weder eine erfolgreiche Quellenprüfung noch vollständige Einhaltung ungelesener Quellenlisten. Bei verlässlichem Suchraum gilt die bestehende Ausfallregel: mit transparent benannten Grenzen weiterrecherchieren, statt Listen oder Zugriffe zu erfinden.
+
+Halte für den knappen Recherche-/Wiki-Status nachvollziehbar fest, welche passenden Pflichtquellen tatsächlich geprüft wurden und welche Zugriffsgrenzen bestehen. Die bloße Nichtnennung einer ausgeschlossenen Quelle im Endergebnis beweist keine korrekte Recherche. Suchprotokolle bleiben außerhalb der Signal Packages; eine Einschränkung, die Aussagekraft oder Herkunft eines gelieferten Signals betrifft, bleibt im jeweiligen Package erhalten.
+
 ## Standardworkflow für offene Themenrecherche
 
 Eine im Startprompt angegebene Suchpriorität steuert die Recherche innerhalb der Rubrikdefinition aus der Taxonomy. Lifestyle kann wie jede andere Rubrik priorisiert und bei offener Themenrecherche berücksichtigt werden. Es ist keine zusätzliche Modusaktivierung erforderlich.
@@ -123,7 +135,7 @@ Wenn der Nutzer eine offene Themenrecherche startet:
 
 Lies zu Beginn die relevanten Seiten der Wiki-Wissensbasis gemäß dem Abschnitt **„Wiki-Nutzung bei Rechercheaufgaben“**.
 
-Leite aus Anfrage, redaktionellem Rahmen, Taxonomie und aktuellem Kontext mehrere sinnvolle Suchrichtungen ab.
+Leite aus Anfrage, redaktionellem Rahmen, Taxonomie und aktuellem Kontext mehrere sinnvolle Suchrichtungen ab. Plane passende Pflichtquellen und zusätzliche freie Webrecherche ein; die Pflichtliste darf den Suchraum nicht auf diese Websites verengen.
 
 Nutze die tatsächlich verfügbare Websuche aktiv und eigenständig, um aktuelle Entwicklungen in Deutschland zu identifizieren.
 

@@ -4,7 +4,7 @@ Diese Darstellung wurde auf Dominiks Wunsch nach dem Test vom 19.11.2026 erweite
 
 ## Aufbau
 
-Beginne mit höchstens zwei kurzen Sätzen zu Zahl der tatsächlich qualifizierten Signale, Recherchestand und tatsächlich erfolgtem beziehungsweise eingeschränktem Wiki-/Historienabgleich. Danach folgt **eine nummerierte Liste**, vom aussichtsreichsten zum nachgeordneten ausgewählten Signal. Erfinde keinen Live-Abgleich, keine Quellenprüfung und keine Aktualisierung.
+Beginne mit höchstens zwei kurzen Sätzen zu Zahl der tatsächlich qualifizierten Signale, Recherchestand und tatsächlich erfolgtem beziehungsweise eingeschränktem Wiki-/Historienabgleich. Danach folgt **eine nummerierte Liste**, vom aussichtsreichsten zum nachgeordneten ausgewählten Signal. Erfinde keinen Live-Abgleich, keine Quellenprüfung und keine Aktualisierung. Nenne im knappen Status auch die tatsächlich geprüften passenden Pflichtquellen und konkrete Zugriffslücken aus der Taxonomy-Quellensteuerung; ergänze dafür keine zweite Ergebnisliste und kein langes Suchprotokoll.
 
 Jeder Listeneintrag enthält in dieser Reihenfolge:
 
