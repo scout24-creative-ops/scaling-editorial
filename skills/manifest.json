@@ -183,8 +183,8 @@
       "requires_skills": [],
       "files": {
         "SKILL.md": {
-          "sha256": "a61a59e3aeb30aa29a165caa1d46b5f79172f2f07c674fa39865181fce9adc20",
-          "bytes": 20489,
+          "sha256": "3f8a7ecae8dbe95d86369d5778e5c7a22137aaab7a11c70278b9a1912d2553e9",
+          "bytes": 21578,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -203,28 +203,33 @@
           "mode": "100644"
         },
         "references/component-library.html": {
-          "sha256": "1020701495a0a3766c6ad324c990e42d4be0e54e74382284ee329559a886cb5a",
-          "bytes": 77350,
+          "sha256": "1d846b60ac5e6b67acdc7ec7d16b0a201502a27cc60f9cebbf44460ee1199d98",
+          "bytes": 77491,
           "mode": "100644"
         },
         "references/contentful-integration.md": {
-          "sha256": "76491766a041f820a2ea8c0a2b00b1a8d43c96c412dec3d96cd0781a61aed89a",
-          "bytes": 9466,
+          "sha256": "49c26fefcd0876e73c0ea75af296309152726fc850b5b6c6e06a2678259105c9",
+          "bytes": 9884,
           "mode": "100644"
         },
         "references/editorial-policy.md": {
-          "sha256": "0b49217a5c3814a7c35b3522484f1404b810b45856c28f76806a8224fd603b2c",
-          "bytes": 63509,
+          "sha256": "43976df3711d5a880c7fb8529d86b0226a76f037f7ab82d8097135a27dc67eef",
+          "bytes": 64329,
           "mode": "100644"
         },
         "references/execution-modes.md": {
-          "sha256": "cdcf02e3bc0a34eacd09c0998519be247e3e00a321f4971bc2e6330fc0350fd9",
-          "bytes": 4381,
+          "sha256": "87654d13bf0c6a774c344a1d92accbbdb2a798bcf59fb60ea806f75b8418a2a9",
+          "bytes": 4546,
+          "mode": "100644"
+        },
+        "references/image-roles.md": {
+          "sha256": "0d9b8350a0e316e620bc2772a0ab574ee41b45c7415ad86b08b29268377d8cc4",
+          "bytes": 6190,
           "mode": "100644"
         },
         "references/news-selection.md": {
-          "sha256": "057cedd9ea887d37bce6f3382554eb3dda9dee4b959ca8939058911a1c79d34f",
-          "bytes": 11029,
+          "sha256": "30e22ae864d628327c45ee9cd1395eca44465f127ed8b8c6e503bf1415d5e0fb",
+          "bytes": 11386,
           "mode": "100644"
         },
         "references/portal-config.json": {
@@ -233,18 +238,18 @@
           "mode": "100644"
         },
         "references/portal-ux.md": {
-          "sha256": "3e1f487faf875624252cd98f6e9a0ceb42caaf2b259864b84b8ea919632e6e79",
-          "bytes": 25149,
+          "sha256": "df287a6d0a5d11d6d4f0e3febd8599e3da7b7113c27491b52cb1b06b7f82c6aa",
+          "bytes": 25315,
           "mode": "100644"
         },
         "references/publisher-contract.md": {
-          "sha256": "1fcfb6f20faa062ba67b3839e6422a052816561658734d7d2825067926145ae6",
-          "bytes": 13875,
+          "sha256": "c2105f431ea39cd3d9042571e59872388660548eabee292e12643eb416f17bc9",
+          "bytes": 14161,
           "mode": "100644"
         },
         "references/required-inputs-and-placement.md": {
-          "sha256": "6c2e21ef462908f274fa4cdc73ca9b12c0a212b4963b588929950c1032ad6c7b",
-          "bytes": 10192,
+          "sha256": "6057676ef3fd12d2635a02040fb5a5e05e463f5f0ee39e4d8876425c51fa0876",
+          "bytes": 10899,
           "mode": "100644"
         },
         "references/setup-check.md": {
@@ -258,8 +263,13 @@
           "mode": "100644"
         },
         "references/wiki-production-records.md": {
-          "sha256": "c698660cb57a8e36a8a623022b5789457c0f1725b0c692faae0c3ea48a3ac511",
-          "bytes": 15865,
+          "sha256": "90e168e01d13c6a93c786f289181eb0c21cf65f978b54c74f8568e0d0a956998",
+          "bytes": 16010,
+          "mode": "100644"
+        },
+        "scripts/check_image_roles.py": {
+          "sha256": "5751bf613922d9aa015c4746f5a329e501680c695844dbc6144b7998838573d1",
+          "bytes": 7016,
           "mode": "100644"
         },
         "scripts/check_source_links.py": {
