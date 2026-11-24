@@ -23,8 +23,8 @@
           "mode": "100644"
         },
         "references/editorial-policy.md": {
-          "sha256": "b705633150e5097d7609e3f8bb172ca19de9aa2050624925749259b972be7829",
-          "bytes": 29248,
+          "sha256": "940bac73dd3f38e02784849b74909611bd9808b43a5711de4e5a78ee04a3b52e",
+          "bytes": 30129,
           "mode": "100644"
         },
         "references/file-delivery.md": {
@@ -38,8 +38,8 @@
           "mode": "100644"
         },
         "references/output-contract.md": {
-          "sha256": "0e5094ee335688c293509a37f581e3dbfb8affa2438404a04535f530912d5b0a",
-          "bytes": 13199,
+          "sha256": "a830fb4a30436745f9e9a3b562333debf685a674a1aa6e89d1be2dee25fe2790",
+          "bytes": 13497,
           "mode": "100644"
         },
         "scripts/write_package.py": {

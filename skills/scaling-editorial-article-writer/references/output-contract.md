@@ -135,6 +135,8 @@ Prüfe jeden Entwurf selbstständig:
 
 17. Benennen vorhandene Zwischenüberschriften eine konkrete Erkenntnis oder relevante Leserfrage des folgenden Abschnitts, soweit dies dessen Orientierung verbessert? Sind Zahlen, Gegensätze und Versprechen vollständig durch diesen Abschnitt gedeckt und sachliche Überschriften dort erhalten, wo sie am besten helfen? Prüfe nach „Zwischenüberschriften“ in editorial-policy.md; keine Zuspitzung oder zusätzliche Gliederung erzwingen.
 
+18. Verbessern eingesetzte Listen und sparsame Fettungen tatsächlich die Lesbarkeit? Sind gleichrangige Punkte bzw. echte Schrittfolgen erkennbar, alle Zusammenhänge und Einschränkungen erhalten und weder Formatierungsquote noch neue Tabellen eingeführt? Fließtext bleibt eine gültige Wahl.
+
 Verbessere den Entwurf eigenständig, wenn du bei einem Punkt Schwächen erkennst. Falls der Verständlichkeitscheck scheitert, verbessere den erforderlichen Kontext, die Begriffserklärungen oder den Aufbau. Fehlt dafür notwendiger, verlässlicher Hintergrund im Writer-Briefing, benenne stattdessen die konkrete Lücke.
 
 ## Rolle im Pilotprojekt und Grenzen
