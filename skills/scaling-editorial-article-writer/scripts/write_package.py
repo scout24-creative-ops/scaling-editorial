@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Write one clean editorial handoff file; structural checks are not fact checks."""
+"""Write a structural and length-checked editorial handoff; never verify facts."""
 import argparse
 from datetime import datetime
 import hashlib
+from html import unescape
+from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
@@ -12,10 +14,52 @@ import unicodedata
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
-CONTRACTS = {'article': {'title': 'Article Package', 'sections': ['Headline', 'Headline-Alternativen', 'Introtext', 'SEO', 'Artikel', 'Quellen', 'Interne Linkvorschläge', 'Titelbild', 'Offene Prüfungen'], 'optional_sections': ['Offene Prüfungen'], 'metadata': ['Auftrag', 'Rubrik', 'Themen-Tags', 'Platzierung', 'Slug-Vorschlag', 'Autor', 'Rolle', 'Veröffentlichungsdatum', 'Status', 'Bild-URL'], 'optional_metadata': ['Entry-ID', 'Zielseite'], 'sources_section': 'Quellen'}}
+CONTRACTS = {'article': {'title': 'Article Package', 'sections': ['Headline', 'Headline-Alternativen', 'Introtext', 'SEO', 'Artikel', 'Quellen', 'Interne Linkvorschläge', 'Titelbild', 'Offene Prüfungen'], 'optional_sections': ['Offene Prüfungen'], 'metadata': ['Auftrag', 'Rubrik', 'Themen-Tags', 'Platzierung', 'Slug-Vorschlag', 'Autor', 'Rolle', 'Veröffentlichungsdatum', 'Status', 'Bild-URL'], 'optional_metadata': ['Entry-ID', 'Zielseite', 'Längenvorgabe'], 'sources_section': 'Quellen'}}
 
 class PackageError(ValueError):
     pass
+
+class VisibleText(HTMLParser):
+    """Extract prose, excluding HTML headings and image/caption content."""
+    def __init__(self):
+        super().__init__()
+        self.parts = []
+        self.hidden = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in ('h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'figcaption', 'script', 'style'):
+            self.hidden.append(tag)
+        if tag in ('p', 'div', 'li', 'br'):
+            self.parts.append(' ')
+
+    def handle_endtag(self, tag):
+        if self.hidden and self.hidden[-1] == tag:
+            self.hidden.pop()
+        if tag in ('p', 'div', 'li'):
+            self.parts.append(' ')
+
+    def handle_data(self, data):
+        if not self.hidden:
+            self.parts.append(data)
+
+
+def word_count(markdown):
+    """Count visible whitespace-separated prose tokens containing letters/digits."""
+    text = re.sub(r'^\s{0,3}#{1,6}\s+.*$', '', markdown, flags=re.M)
+    text = re.sub(r'!\[[^\]]*\]\([^\n]*?\)', '', text)
+    text = re.sub(r'\[([^\]]+)\]\((?:[^()\n]|\([^()\n]*\))*\)', r'\1', text)
+    text = re.sub(r'^\s*\[[^\]]+\]:\s+\S+.*$', '', text, flags=re.M)
+    text = re.sub(r'\[([^\]]+)\]\[[^\]]*\]', r'\1', text)
+    text = re.sub(r'^\s*(?:[-*+]\s+|\d+[.)]\s+|>\s*)', '', text, flags=re.M)
+    parser = VisibleText()
+    parser.feed(text)
+    return sum(any(char.isalnum() for char in token)
+               for token in unescape(''.join(parser.parts)).split())
+
+
+def article_word_count(sections):
+    return sum(word_count(section['body']) for section in sections
+               if section['heading'] in ('Introtext', 'Artikel'))
 
 def fields(value, required, optional=()):
     if not isinstance(value, dict):
@@ -51,7 +95,7 @@ def public_url(value):
         raise PackageError('Internal Wiki working references are not public article sources')
     return value
 
-def render(data):
+def render(data, allow_long_article=False):
     fields(data,('kind','topic','metadata','sections','source_urls'))
     kind=data['kind']
     if not isinstance(kind,str) or kind not in CONTRACTS:
@@ -105,6 +149,11 @@ def render(data):
         alternatives=[line for line in content['Headline-Alternativen'].splitlines() if re.match(r'^\s*[-*+]\s+\S',line)]
         if len(alternatives)!=2:
             raise PackageError('Exactly two review-only headline alternatives are required')
+        count = article_word_count(sections)
+        if allow_long_article and 'Längenvorgabe' not in labels:
+            raise PackageError('A long-article exception requires the actual user instruction in Längenvorgabe')
+        if count >= 500 and not allow_long_article:
+            raise PackageError(f'Intro and article contain {count} words; default requires fewer than 500. Shorten and recount. Use --allow-long-article only for an explicit user exception.')
     parts=['# '+spec['title']]
     if metadata_lines:
         parts.append('\n'.join(metadata_lines))
@@ -124,10 +173,12 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--input',type=Path,required=True)
     parser.add_argument('--output-dir',type=Path,required=True)
+    parser.add_argument('--allow-long-article',action='store_true',
+                        help='Only for an explicit user length/preservation instruction, documented in Längenvorgabe')
     args=parser.parse_args()
     try:
         data=json.loads(args.input.read_text(encoding='utf-8'),object_pairs_hook=no_duplicate_keys)
-        kind,topic,markdown=render(data)
+        kind,topic,markdown=render(data,args.allow_long_article)
         slug=unicodedata.normalize('NFKD',topic).encode('ascii','ignore').decode().lower()
         slug=re.sub(r'[^a-z0-9]+','-',slug).strip('-')[:65].rstrip('-') or 'thema'
         stamp=datetime.now(ZoneInfo('Europe/Berlin')).strftime('%Y%m%d')
@@ -138,7 +189,9 @@ def main():
             handle.write(raw)
         if target.read_bytes()!=raw:
             raise PackageError('Readback differs from package')
-        print(json.dumps({'path':str(target.resolve()),'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()},ensure_ascii=False))
+        print(json.dumps({'path':str(target.resolve()),'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest(),
+                          'articleWords':article_word_count(data['sections']),
+                          'longArticleException':args.allow_long_article},ensure_ascii=False))
         return 0
     except (OSError,ValueError) as error:
         print(f'Package not delivered: {error}',file=sys.stderr)

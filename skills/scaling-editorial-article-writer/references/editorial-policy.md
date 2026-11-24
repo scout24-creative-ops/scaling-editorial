@@ -261,11 +261,12 @@ Formuliere die stärkste Aussage, die das Briefing tatsächlich trägt – aber 
 
 Für gewöhnliche News-, Markt-, Vergleichs- und Serviceartikel gilt:
 
-- Zielumfang: ungefähr 500 bis 650 Wörter.
-- Standardobergrenze: 700 Wörter für den eigentlichen Artikel.
-- Keine künstliche Mindestlänge.
+- Standardgrenze: **unter 500 Wörter**, also höchstens 499, für Intro und eigentlichen Artikeltext zusammen.
+- Überschriften, Quellenliste und Bildunterschriften zählen nicht mit; die übrigen Package-Metadaten ebenfalls nicht. Alle normalen Textabsätze und Aufzählungen des Artikels zählen mit.
+- Keine Mindestlänge und kein Auffüllen auf einen Zielwert.
+- Zähle nach der letzten Textänderung mechanisch mit `scripts/write_package.py`. Kürze bei 500 oder mehr Wörtern selbstständig, ohne belegte Kernaussagen oder notwendige Einordnung zu verlieren, und zähle erneut. Die Wortzählung ist keine zusätzliche Faktenrecherche.
 
-Bei ausdrücklich gewünschten längeren Artikeln oder deutlich komplexeren Themen darf der Umfang begründet abweichen.
+**Ausnahme nur auf ausdrücklichen Nutzerwunsch:** Verlangt der Nutzer einen längeren Artikel oder einen Umfang ab 500 Wörtern, folge dieser Vorgabe. Eine im Story Package ausdrücklich als Nutzerwunsch dokumentierte längere Vorgabe gilt ebenfalls; ein altes Standardziel oder eine bloße Empfehlung des Story Creators reicht nicht. Thema, Komplexität und eigene Begründungen heben die Grenze nicht auf. Dokumentiere die tatsächliche längere Nutzervorgabe im optionalen Metadatenfeld `Längenvorgabe`. Verwende `--allow-long-article` ausschließlich für diese belegte Ausnahme. Bei einer ausdrücklich reinen Dateiübertragung vorhandener Inhalte nicht still kürzen; dokumentiere den Erhaltungsauftrag ebenfalls als `Längenvorgabe` und prüfe den Umfang wahrheitsgemäß. Eine spätere ausdrücklich kürzere Nutzervorgabe hat Vorrang.
 
 Schreibe kompakt und substanziell. Nutze sinnvolle Zwischenüberschriften, wenn sie die Orientierung verbessern. Verwandle den Artikel nicht in eine lange Liste oder FAQ-Sammlung, sofern das Thema nicht ausdrücklich eine solche Form verlangt. Methodische und rechtliche Einschränkungen sollen korrekt, aber nicht unnötig dominant sein.
 
