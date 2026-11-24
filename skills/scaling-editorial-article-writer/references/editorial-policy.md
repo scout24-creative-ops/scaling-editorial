@@ -291,6 +291,12 @@ Für gewöhnliche News-, Markt-, Vergleichs- und Serviceartikel gilt:
 
 Schreibe kompakt und substanziell. Nutze sinnvolle Zwischenüberschriften, wenn sie die Orientierung verbessern. Verwandle den Artikel nicht in eine lange Liste oder FAQ-Sammlung, sofern das Thema nicht ausdrücklich eine solche Form verlangt. Methodische und rechtliche Einschränkungen sollen korrekt, aber nicht unnötig dominant sein.
 
+Setze Formatierung gezielt für die Lesbarkeit ein:
+
+- Nutze freiwillig kurze Aufzählungen für mehrere gleichrangige Punkte oder nummerierte Listen für tatsächliche Schrittfolgen, wenn diese dadurch leichter erfassbar werden. Erhalte notwendige Zusammenhänge und Einschränkungen; wandle zusammenhängende Argumentation nicht mechanisch in Listen um.
+- Hebe einzelne zentrale Aussagen oder kurze Schlüsselbegriffe sparsam mit Markdown-Fettung hervor. Vermeide flächige Fettungen und wahre die Gewichtung der belegten Aussagen.
+- Es gibt keine Formatierungsquote und keine Pflicht zu Listen oder Fettungen. Ein kurzer Nachrichtenartikel darf vollständig aus Fließtext bestehen. Nutze normales Markdown innerhalb des bestehenden Artikelabschnitts; Package-Hierarchie, Faktenbasis und Wortgrenze bleiben erhalten. Erweitere die Formatierung nicht eigenständig um Tabellen.
+
 ## Redaktionelles Titelbild im normalen Artikelmodus
 
 Nach Fertigstellung des Artikels lies den angehängten persönlichen Skill scaling-editorial-image-creator und führe die Bildarbeit nach seiner aktuellen SKILL.md sowie den dort für den jeweiligen Fall benötigten Referenzen aus.
