@@ -8,9 +8,9 @@ A new Magazine article includes its draft plus News and matching rubric teasers 
 
 ## Required personal decisions
 
-For an implementation, obtain exactly one confirmed real author (Inga Ervig / Julia Walter) and the user-selected full hosted image URL before CMS calls or HTML construction. Existing explicit answers for this exact article need not be repeated. Read-only setup/review and HTML-only preparation retain their limited endpoints and do not authorize writes.
+For an implementation, obtain exactly one confirmed real author (Inga Ervig / Julia Walter) and the three user-confirmed full hosted URLs for title, large/medium teasers and small overview list images under image-roles.md before CMS calls or HTML construction. Existing explicit answers for this exact article need not be repeated. Read-only setup/review and HTML-only preparation retain their limited endpoints and do not authorize writes.
 
-No unassigned author, test author or automatic TEXT_TEST/grey-image fallback is active. A draft/test request does not bypass intake. Keep the selected actual image and supplied matching alt/caption/credit/disclosure in article and both teasers. A generated/downloaded PNG is not a hosted URL; this adapter cannot upload image assets. Missing/unsafe/ambiguous URLs require concrete clarification. Do not generate, fetch or upload replacement images just to fill the input.
+No unassigned author, test author or automatic TEXT_TEST/grey-image fallback is active. A draft/test request does not bypass intake. Keep the selected motif and its matching alt/caption/credit/disclosure, selecting the file by its actual slot under image-roles.md. An expressly article-only order needs only the title role. A generated/downloaded PNG is not a hosted URL; this adapter cannot upload image assets. Missing/unsafe/ambiguous URLs require concrete clarification. Do not generate, fetch or upload replacement images just to fill the input.
 
 The component library contains historical demo media and author examples. They demonstrate markup, not new article defaults. Preserve existing unrelated legacy content and notices on partial updates; do not copy fixture identities, dates or placeholder media into a regular new article.
 
