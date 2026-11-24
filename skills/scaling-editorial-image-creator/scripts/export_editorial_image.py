@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export an editorial PNG, adding the supplied Frontify AI label after cropping."""
+"""Export an editorial WebP title or PNG avatar, adding the supplied Frontify AI label after cropping."""
 
 import argparse
 import hashlib
@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 import shutil
 
-from PIL import Image, ImageOps, ImageStat
+from PIL import Image, ImageOps, ImageStat, features
 
 ASSETS = Path(__file__).resolve().parents[1] / "assets" / "ai-labels"
 
@@ -70,10 +70,16 @@ def _apply_label(image, label, style, corner, label_width, margin):
 def export_image(source: Path, destination: Path, kind: str, label: str = "created",
                  label_style: str = "auto", corner: str = "bottom-right",
                  label_width: int | None = None, margin: int | None = None,
-                 label_reason: str | None = None) -> dict:
+                 label_reason: str | None = None, quality: int = 85) -> dict:
     sizes = {"title": (1920, 1080), "avatar": (240, 240)}
     ratios = {"title": (16, 9), "avatar": (1, 1)}
     target = sizes[kind]
+    output_format = "WEBP" if kind == "title" else "PNG"
+    extension = ".webp" if kind == "title" else ".png"
+    if kind == "title" and (not isinstance(quality, int) or isinstance(quality, bool) or not 1 <= quality <= 100):
+        raise ValueError("WebP quality must be an integer from 1 to 100.")
+    if kind == "title" and not features.check("webp"):
+        raise ValueError("WebP encoding is unavailable in this Pillow installation.")
     if label not in ("created", "modified", "none"):
         raise ValueError("Unknown label type.")
     if label_style not in ("auto", "positive", "negative", "negative-transparent"):
@@ -86,8 +92,8 @@ def export_image(source: Path, destination: Path, kind: str, label: str = "creat
         raise ValueError("Keep the source file; choose a separate output path.")
     if destination.exists():
         raise FileExistsError("Output exists; choose a new version instead of overwriting.")
-    if destination.suffix.lower() != ".png":
-        raise ValueError("The output filename must end in .png.")
+    if destination.suffix.lower() != extension:
+        raise ValueError(f"The {kind} output filename must end in {extension}.")
     if not destination.parent.is_dir():
         raise ValueError("Create the output directory before exporting.")
 
@@ -106,7 +112,7 @@ def export_image(source: Path, destination: Path, kind: str, label: str = "creat
         left = (width - crop_width) // 2
         top = (height - crop_height) // 2
         box = (left, top, left + crop_width, top + crop_height)
-        unchanged = (label == "none" and original_format == "PNG"
+        unchanged = (kind == "avatar" and label == "none" and original_format == "PNG"
                      and orientation == 1 and image.size == target)
         label_info = {"type": "none", "reason": label_reason}
         if unchanged:
@@ -126,11 +132,14 @@ def export_image(source: Path, destination: Path, kind: str, label: str = "creat
                 )
                 label_info["reason"] = label_reason or "Newly AI-created image."
             with destination.open("xb") as outgoing:
-                result.save(outgoing, format="PNG")
+                if output_format == "WEBP":
+                    result.save(outgoing, format="WEBP", quality=quality, method=6, lossless=False)
+                else:
+                    result.save(outgoing, format="PNG")
 
     with Image.open(destination) as check:
         check.load()
-        if check.format != "PNG" or check.size != target:
+        if check.format != output_format or check.size != target:
             raise ValueError("Export verification failed.")
 
     return {
@@ -139,7 +148,9 @@ def export_image(source: Path, destination: Path, kind: str, label: str = "creat
         "oriented_dimensions": [width, height],
         "crop_box": list(box),
         "dimensions": list(target),
-        "format": "PNG",
+        "format": output_format,
+        "quality": quality if output_format == "WEBP" else None,
+        "encoding": "lossy" if output_format == "WEBP" else "lossless",
         "bytes": destination.stat().st_size,
         "sha256": hashlib.sha256(destination.read_bytes()).hexdigest(),
         "source_copied_unchanged": unchanged,
@@ -152,6 +163,7 @@ if __name__ == "__main__":
     parser.add_argument("source", type=Path)
     parser.add_argument("destination", type=Path)
     parser.add_argument("--kind", choices=("title", "avatar"), default="title")
+    parser.add_argument("--quality", type=int, default=85, help="WebP title quality, 1-100 (default: 85); avatars stay PNG.")
     parser.add_argument("--label", choices=("created", "modified", "none"), default="created")
     parser.add_argument("--label-reason", help="Required for modified or none; record actual provenance/edit.")
     parser.add_argument("--label-style", choices=("auto", "positive", "negative", "negative-transparent"), default="auto")
@@ -162,7 +174,7 @@ if __name__ == "__main__":
     try:
         print(json.dumps(export_image(
             args.source, args.destination, args.kind, args.label, args.label_style,
-            args.corner, args.label_width, args.margin, args.label_reason,
+            args.corner, args.label_width, args.margin, args.label_reason, args.quality,
         ), ensure_ascii=False))
     except (ValueError, OSError) as error:
         parser.exit(1, f"Export failed: {error}\n")

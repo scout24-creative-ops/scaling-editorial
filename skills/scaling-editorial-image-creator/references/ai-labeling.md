@@ -37,16 +37,16 @@ Use `assets/ai-labels/ai-{created|modified}-{positive|negative|negative-transpar
 - Add the label **after the final crop and resize**, using the supplied artwork. Caption, alt text and metadata remain required where applicable and do not replace this visible label.
 - Treat the exporter's 192 px artwork width and 24 px margin for 1920 × 1080 heroes (88 px and 8 px for 240 × 240 portraits) as adjustable implementation defaults, not Frontify-specified minimums. Inspect the actual result. `--label-width`, `--margin`, `--corner` and `--label-style` permit adjustments without changing the scene.
 - Check contrast over the whole mark at the intended display size. Automatic light/dark selection estimates contrast from pixels beneath the artwork; it cannot verify visual legibility. On busy backgrounds, choose the other corner or a legible original variant/size. Do not invent a new logo treatment.
-- Check the reopened labeled PNG at full size and a realistic article display size. Inspect teaser crops too. A bottom label on a 16:9 master can be clipped by a centered 16:7 crop or become unreadable at 120 × 80 / 80 × 56. Do not promise one baked-in mark survives every derivative. Keep the unlabelled master internally; require the CMS/publishing step to apply the same original label **after each actual crop/resize** at a readable size. Keep these as downstream handoff instructions, not extra deliverables or a publication operation. If the small format cannot accommodate a legible full lockup, report that placement gap rather than inventing an icon or claiming a passed check.
+- Check the reopened compressed WebP title image (PNG for a requested portrait) at full size and a realistic article display size. Inspect teaser crops too. A bottom label on a 16:9 master can be clipped by a centered 16:7 crop or become unreadable at 120 × 80 / 80 × 56. Do not promise one baked-in mark survives every derivative. Keep the unlabelled master internally; require the CMS/publishing step to apply the same original label **after each actual crop/resize** at a readable size. Keep these as downstream handoff instructions, not extra deliverables or a publication operation. If the small format cannot accommodate a legible full lockup, report that placement gap rather than inventing an icon or claiming a passed check.
 
 ## Export examples
 
 Resolve the actual skill root, identified unlabelled source and final destination first. Keep the original and deliver only the selected final asset.
 
 ```bash
-python <skill-root>/scripts/export_editorial_image.py <source> <final>.png --kind title
-python <skill-root>/scripts/export_editorial_image.py <source> <final>.png --kind title --label modified --label-reason 'Original human-made photo; AI furnishings added' --corner bottom-left
-python <skill-root>/scripts/export_editorial_image.py <source> <final>.png --kind title --label none --label-reason 'Authentic original; only colour correction'
+python <skill-root>/scripts/export_editorial_image.py <source> <final>.webp --kind title
+python <skill-root>/scripts/export_editorial_image.py <source> <final>.webp --kind title --label modified --label-reason 'Original human-made photo; AI furnishings added' --corner bottom-left
+python <skill-root>/scripts/export_editorial_image.py <source> <final>.webp --kind title --label none --label-reason 'Authentic original; only colour correction'
 ```
 
 The default is `created`; explicitly justify `modified` or `none` from actual provenance. Read the JSON result for `ai_label.type`, asset, style, placement and checksum. Confirm technical success and visually inspect the file before reporting the mark as checked. If the original asset, source access or compositing capability is missing, keep the article and original image, report `AI-Label ausstehend`, and do not call the image publishing-ready. Do not substitute a caption-only disclosure or an AI-drawn approximation.

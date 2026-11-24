@@ -88,8 +88,8 @@
       "requires_skills": [],
       "files": {
         "SKILL.md": {
-          "sha256": "57a4b2dde93ae3245e17b9f93fb392c7ebd03b33e6aa1f489fee039b4015a11d",
-          "bytes": 24039,
+          "sha256": "b5b921636067c90509bac11b304138c618404a8d882e139dd0730f3d05aaf2de",
+          "bytes": 24926,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -163,8 +163,8 @@
           "mode": "100644"
         },
         "references/ai-labeling.md": {
-          "sha256": "67a8f1c384bba01aefa1129ffc9c991332dd1634d959a67394e9d4998807191c",
-          "bytes": 6080,
+          "sha256": "4b825870de984134f34e317137e6238e970b197eab01514183e765c1ffe3ccb9",
+          "bytes": 6130,
           "mode": "100644"
         },
         "references/editorial-style.md": {
@@ -173,8 +173,8 @@
           "mode": "100644"
         },
         "scripts/export_editorial_image.py": {
-          "sha256": "a5b6a04bac90dd1558bc785411ce063921fb610812c7af32b02da68b9f6a0818",
-          "bytes": 8040,
+          "sha256": "5c718ad99464627084e6d5b166b21479c7611be032755f57227e4c8472d23cad",
+          "bytes": 9035,
           "mode": "100644"
         }
       }
