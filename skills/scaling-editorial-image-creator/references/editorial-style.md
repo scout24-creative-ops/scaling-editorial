@@ -8,7 +8,7 @@ Based on the user-provided Imagery Builder summary of Scout24 picture guidance (
 - Seeker campaign reference: slightly stricter cool natural daylight; muted blue-green and gray-blue; realistic indoor shadows; natural human activity. Do not require the same subject, person, palette or poses in unrelated editorial stories.
 - 24-35 mm and 35-50 mm are both described in source materials; neither is a universal lens requirement. Choose non-distorted detail, medium or contextual framing to match the picture's job.
 - No verified corporate photo HEX values, exposure temperatures or universal dimensions exist in the provided summary. Do not invent them.
-- Current SE compositions use a 16:9 title image, a 16:7 news lead, compact 120 × 80 px recommendations and 80 × 56 px reading-list images. Keep the subject readable across these crops; the skill's final title file remains 1920 × 1080 px.
+- Current SE compositions use 16:9 article title, News/category lead and grid images, plus 3:2 compact 120 × 80 px overview images. Keep the subject readable across these crops. The separate large/medium and small-list exports are specified in SKILL.md; the separate 80 × 56 px article reading list is outside this rollout. Check a retained older 16:7 crop only when it is actually requested.
 
 ## Motif possibilities by editorial angle
 

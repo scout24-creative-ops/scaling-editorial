@@ -8,8 +8,8 @@
       ],
       "files": {
         "SKILL.md": {
-          "sha256": "da9741f64f68240ce84b602292d3097ff6fa40fdc8694313fe06a4fa4a1912a5",
-          "bytes": 6855,
+          "sha256": "8fc141ba6e6afb08873d2f5026604ad9eb46a382eb4e79663dbac0bf5d75b710",
+          "bytes": 7094,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -28,18 +28,18 @@
           "mode": "100644"
         },
         "references/file-delivery.md": {
-          "sha256": "b2284a7fe188669f30a04a41f2c0bfd290caf99a1ce3e6541241c9bbe6b07279",
-          "bytes": 5710,
+          "sha256": "237ac5e7511805db0c3d0709953509f4c7f6ef0ed5c4030ad95fe26cb83dc4d9",
+          "bytes": 5980,
           "mode": "100644"
         },
         "references/imagery-dependency.md": {
-          "sha256": "34ec6a4e449fa12fd1d86cad932f30e15afd76a950b13c8979efef0e3bc379d2",
-          "bytes": 2727,
+          "sha256": "a992c08c21ea769e8a3415019915ce61321dc34391f2d2140346906f7e7fd2de",
+          "bytes": 3158,
           "mode": "100644"
         },
         "references/output-contract.md": {
-          "sha256": "a830fb4a30436745f9e9a3b562333debf685a674a1aa6e89d1be2dee25fe2790",
-          "bytes": 13497,
+          "sha256": "9225eea1db525efc95e41ad5d7e3ce4d7fc353a2305a689e9086b27a2c13a517",
+          "bytes": 14948,
           "mode": "100644"
         },
         "scripts/write_package.py": {
@@ -88,8 +88,8 @@
       "requires_skills": [],
       "files": {
         "SKILL.md": {
-          "sha256": "57a4b2dde93ae3245e17b9f93fb392c7ebd03b33e6aa1f489fee039b4015a11d",
-          "bytes": 24039,
+          "sha256": "08a86d99366b905f6fdef27e44fbac91d886b732156e78655af8e40a5f63bfe0",
+          "bytes": 29053,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -163,18 +163,18 @@
           "mode": "100644"
         },
         "references/ai-labeling.md": {
-          "sha256": "67a8f1c384bba01aefa1129ffc9c991332dd1634d959a67394e9d4998807191c",
-          "bytes": 6080,
+          "sha256": "1399bb38c0bfd7e567bd69f0dd6b9d146a0b22c92fc5fb9686b404c554e14ecc",
+          "bytes": 7310,
           "mode": "100644"
         },
         "references/editorial-style.md": {
-          "sha256": "ef74bc131c2e88f3ac2bc1f9c952cf92196d11cea52a9816009b4eefb6d4af4c",
-          "bytes": 9864,
+          "sha256": "29de3f8fe06ad6c7a4954356f8561db50b5bdb2cd6250ccca2d69207aba60084",
+          "bytes": 10017,
           "mode": "100644"
         },
         "scripts/export_editorial_image.py": {
-          "sha256": "a5b6a04bac90dd1558bc785411ce063921fb610812c7af32b02da68b9f6a0818",
-          "bytes": 8040,
+          "sha256": "6b1055c9d19cb2b80b5ca35764ef33ec9dc981b728b11272f550f4814e478a5c",
+          "bytes": 9991,
           "mode": "100644"
         }
       }
