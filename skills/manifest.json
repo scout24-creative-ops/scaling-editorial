@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-21",
+  "snapshot_date": "2026-11-24",
   "skills": {
     "scaling-editorial-article-writer": {
       "requires_skills": [
@@ -8,8 +8,8 @@
       ],
       "files": {
         "SKILL.md": {
-          "sha256": "06e55a07412a37560f803d69954b89a17debfbe5e89bf2197a7e19616f3292b6",
-          "bytes": 6511,
+          "sha256": "3da46436b17d4cd5614a7b3302de19a0375413427b5af4fb7b5f5d30bae92f0e",
+          "bytes": 6661,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -23,13 +23,13 @@
           "mode": "100644"
         },
         "references/editorial-policy.md": {
-          "sha256": "c2cde34f62a7dd5b3c7b330e2fc1abeab55b5744c1b76b7cbd0915444c208638",
-          "bytes": 25030,
+          "sha256": "50eed76db3b1492734252a6f50c9ac3c449ee03cee0fe05d61a9770e1bce9aff",
+          "bytes": 26252,
           "mode": "100644"
         },
         "references/file-delivery.md": {
-          "sha256": "f06eaa8668f9364b63c2864ee816da214d5db0af8f176e27ad44dbb5ad09f3a6",
-          "bytes": 4785,
+          "sha256": "b2284a7fe188669f30a04a41f2c0bfd290caf99a1ce3e6541241c9bbe6b07279",
+          "bytes": 5710,
           "mode": "100644"
         },
         "references/imagery-dependency.md": {
@@ -38,13 +38,13 @@
           "mode": "100644"
         },
         "references/output-contract.md": {
-          "sha256": "547bc7c391d3da2b751a4f2418c59f687c931fcb3ba27bb69da998188e22bfbb",
-          "bytes": 11859,
+          "sha256": "a6173cfe178b43edcc65810b38c955ac4fda83411f0851b70244c388b8d5fe51",
+          "bytes": 12424,
           "mode": "100644"
         },
         "scripts/write_package.py": {
-          "sha256": "8c97f4a81384e13f36ff9bc740501d7c9a4fd3a39721bb8ed437cc0ad70aa000",
-          "bytes": 7010,
+          "sha256": "c009120e1f9a1f2286ec8b24033a28d47fd3b4befd61735b1aa3a159f1cc236b",
+          "bytes": 9548,
           "mode": "100644"
         }
       }
@@ -183,8 +183,8 @@
       "requires_skills": [],
       "files": {
         "SKILL.md": {
-          "sha256": "e3815c301baa2944a4590e72bcbaef63c6df6ba21bfb5afab2a18798bacfb543",
-          "bytes": 19459,
+          "sha256": "a61a59e3aeb30aa29a165caa1d46b5f79172f2f07c674fa39865181fce9adc20",
+          "bytes": 20489,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -208,13 +208,13 @@
           "mode": "100644"
         },
         "references/contentful-integration.md": {
-          "sha256": "4225b193d8de839cc86854882c598b179e055ec865e0ab6d1193ed7ca53fcdf8",
-          "bytes": 9095,
+          "sha256": "76491766a041f820a2ea8c0a2b00b1a8d43c96c412dec3d96cd0781a61aed89a",
+          "bytes": 9466,
           "mode": "100644"
         },
         "references/editorial-policy.md": {
-          "sha256": "e5dc7220ea09996db601afeb75cf4f5eb4df32c86fa09e4e3cc75a6669ed5937",
-          "bytes": 60979,
+          "sha256": "0b49217a5c3814a7c35b3522484f1404b810b45856c28f76806a8224fd603b2c",
+          "bytes": 63509,
           "mode": "100644"
         },
         "references/execution-modes.md": {
@@ -223,8 +223,8 @@
           "mode": "100644"
         },
         "references/news-selection.md": {
-          "sha256": "e127728f2e3ef10809ebda3b758d269fd04dda9ff957da935bee4f94d08e3b50",
-          "bytes": 10803,
+          "sha256": "057cedd9ea887d37bce6f3382554eb3dda9dee4b959ca8939058911a1c79d34f",
+          "bytes": 11029,
           "mode": "100644"
         },
         "references/portal-config.json": {
@@ -233,18 +233,18 @@
           "mode": "100644"
         },
         "references/portal-ux.md": {
-          "sha256": "06b7d83125e9d384533e8f60fa7dbf7462a177c4acec1e8bd037ed31ab91cdda",
-          "bytes": 24968,
+          "sha256": "3e1f487faf875624252cd98f6e9a0ceb42caaf2b259864b84b8ea919632e6e79",
+          "bytes": 25149,
           "mode": "100644"
         },
         "references/publisher-contract.md": {
-          "sha256": "a40149a0cc5f3f15445656549c24a53aeb33ce88accc2d01a3b735ce45c08eaa",
-          "bytes": 13330,
+          "sha256": "1fcfb6f20faa062ba67b3839e6422a052816561658734d7d2825067926145ae6",
+          "bytes": 13875,
           "mode": "100644"
         },
         "references/required-inputs-and-placement.md": {
-          "sha256": "ec2f06ba49d6cf30b4b7205a303848a638e1560f139a92f58a1b0756233d1a3f",
-          "bytes": 9992,
+          "sha256": "6c2e21ef462908f274fa4cdc73ca9b12c0a212b4963b588929950c1032ad6c7b",
+          "bytes": 10192,
           "mode": "100644"
         },
         "references/setup-check.md": {
@@ -261,6 +261,11 @@
           "sha256": "c698660cb57a8e36a8a623022b5789457c0f1725b0c692faae0c3ea48a3ac511",
           "bytes": 15865,
           "mode": "100644"
+        },
+        "scripts/check_source_links.py": {
+          "sha256": "75e156fa4c7128a2fe935cb655676fa88452bcd3403e3d81ff404f968b966e38",
+          "bytes": 4144,
+          "mode": "100644"
         }
       }
     },
@@ -268,8 +273,8 @@
       "requires_skills": [],
       "files": {
         "SKILL.md": {
-          "sha256": "491374b722fa85ecb648974e22c24ecbcab54927846d9ba9641097181622d908",
-          "bytes": 5999,
+          "sha256": "dc9eb2ce6ef3dc80877db8249848de8fb3a0b2cb13429e9d6d5aa4ce1359cb04",
+          "bytes": 6215,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -283,8 +288,8 @@
           "mode": "100644"
         },
         "references/editorial-policy.md": {
-          "sha256": "0ec222fe7c835a351f8db3e1ab93d3586d39ea57f523e0daaa964f4d8b1a12ad",
-          "bytes": 20721,
+          "sha256": "c7056a0785e7167c4853ee2f78c7ab558b0a693954abe0d1e67b37e00608da7c",
+          "bytes": 21124,
           "mode": "100644"
         },
         "references/file-delivery.md": {
@@ -298,8 +303,8 @@
           "mode": "100644"
         },
         "references/output-contract.md": {
-          "sha256": "afd9c9e6c314ccd58f519fc925ad4730c96b3111095354f60afcf330655af21a",
-          "bytes": 9199,
+          "sha256": "0629b3730dcceeeeae07224c5ed0f2116c67d714ee0e48d49affa45aba1015c4",
+          "bytes": 9580,
           "mode": "100644"
         },
         "scripts/write_package.py": {
