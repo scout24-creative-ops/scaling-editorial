@@ -328,8 +328,8 @@
           "mode": "100644"
         },
         "assets/icon.svg": {
-          "sha256": "0cdb7990dea3ad89ead04743eeac2dc58c119fb0b8b4a01499a21237f155bc1a",
-          "bytes": 843,
+          "sha256": "83edb7ff1fcb54461e60f8bab4147bf6e24b4f9bb9e5d29283c614f40b811039",
+          "bytes": 3177,
           "mode": "100644"
         },
         "references/chat-output.md": {
