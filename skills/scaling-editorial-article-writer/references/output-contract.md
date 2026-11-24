@@ -131,6 +131,9 @@ Prüfe jeden Entwurf selbstständig:
 13. Stimmen SEO-Titel, Meta Description, Headline, Introtext, Artikel und Titelbild in ihrer Aussage überein?
 14. Sind interne Linkvorschläge ausschließlich auf tatsächlich übergebene und verifizierte Ziele gestützt?
 15. Liegen Intro und Artikeltext zusammen nach mechanischer Zählung unter 500 Wörtern, oder ist eine tatsächliche ausdrückliche längere Nutzervorgabe unter `Längenvorgabe` dokumentiert? Nach jeder Kürzung erneut zählen; Überschriften, Quellen und Bildunterschriften nicht mitzählen. Quellen, Aussagegrenzen und journalistische Qualität erhalten.
+16. Ist der gezielte Kürzungsdurchgang nach „Prägnanz und notwendige Einordnung“ erfolgt? Prüfe den Beitrag jedes Absatzes und entferne Dopplungen, Übererklärungen und entbehrliche Absicherungen. Sind notwendige Erklärungen, Quellenbezüge und Aussagegrenzen nach dem Kürzen weiterhin an der passenden Stelle erhalten?
+
+17. Benennen vorhandene Zwischenüberschriften eine konkrete Erkenntnis oder relevante Leserfrage des folgenden Abschnitts, soweit dies dessen Orientierung verbessert? Sind Zahlen, Gegensätze und Versprechen vollständig durch diesen Abschnitt gedeckt und sachliche Überschriften dort erhalten, wo sie am besten helfen? Prüfe nach „Zwischenüberschriften“ in editorial-policy.md; keine Zuspitzung oder zusätzliche Gliederung erzwingen.
 
 Verbessere den Entwurf eigenständig, wenn du bei einem Punkt Schwächen erkennst. Falls der Verständlichkeitscheck scheitert, verbessere den erforderlichen Kontext, die Begriffserklärungen oder den Aufbau. Fehlt dafür notwendiger, verlässlicher Hintergrund im Writer-Briefing, benenne stattdessen die konkrete Lücke.
 
