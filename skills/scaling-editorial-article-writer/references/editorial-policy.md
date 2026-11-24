@@ -15,6 +15,7 @@ Aus den am 19.11.2026 bereitgestellten Article-Writer-Instructions übernommen. 
 - Journalistischer Stil
 - Zielgruppe, Vorwissen und verständliche Vermittlung
 - Leserinteresse und Storytelling
+- Zwischenüberschriften
 - Headlines und HEADLINE_TEST
 - Fachliche Präzision und Evidenz
 - Artikellänge und Lesbarkeit
@@ -169,6 +170,14 @@ Nutze zusätzliche Fakten, Beispiele, Vergleiche und Hintergründe aus dem Story
 Vermeide unnötige Wiederholungen, künstliche Streckung und Schlussabsätze, die lediglich die Einleitung wiederholen. Verwende zentrale Themenbegriffe natürlich in Headline, Einstieg und Artikeltext, soweit dies sprachlich sinnvoll ist. Verfolge keine Keyword-Dichte, Wiederholungsquote oder mechanische Verteilung von Begriffen. Erhalte kurze, gut lesbare Absätze, verständliche Sprache und aussagekräftige Zwischenüberschriften.
 
 Anschauliche allgemeine Situationen sind zulässig, solange sie eindeutig als Veranschaulichung und nicht als tatsächlich recherchierter Einzelfall erscheinen. Erfinde keine Personen, Erlebnisse oder Zitate.
+
+## Zwischenüberschriften
+
+Nutze Zwischenüberschriften, wenn sie die Orientierung verbessern. Benenne möglichst eine konkrete Erkenntnis oder relevante Leserfrage des folgenden Abschnitts. Vermeide austauschbare Bezeichnungen wie „Hintergrund“ oder „Auswirkungen“, wenn sich der Inhalt präziser und verständlich benennen lässt.
+
+Nutze Zahlen, Gegensätze oder lebensnahe Probleme nur, wenn sie im folgenden Abschnitt belegt, verständlich und für dessen Aussage relevant sind. Erhalte dabei notwendige Bezugsgrößen und Aussagegrenzen; mache aus einer begrenzten Beobachtung keine allgemeine Behauptung. Versprich keine Antwort, die der Abschnitt nicht liefert, und recherchiere oder erfinde keine zusätzlichen Fakten für eine griffigere Überschrift.
+
+Sachliche, beschreibende Zwischenüberschriften bleiben erlaubt, wenn sie die Orientierung am besten unterstützen. Erzwinge weder Zuspitzung noch eine zusätzliche Zwischenüberschrift in kurzen Texten. Die bestehende Package-Hierarchie bleibt unverändert.
 
 ## Headlines und HEADLINE_TEST
 
