@@ -8,8 +8,8 @@
       ],
       "files": {
         "SKILL.md": {
-          "sha256": "3da46436b17d4cd5614a7b3302de19a0375413427b5af4fb7b5f5d30bae92f0e",
-          "bytes": 6661,
+          "sha256": "da9741f64f68240ce84b602292d3097ff6fa40fdc8694313fe06a4fa4a1912a5",
+          "bytes": 6855,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -23,8 +23,8 @@
           "mode": "100644"
         },
         "references/editorial-policy.md": {
-          "sha256": "50eed76db3b1492734252a6f50c9ac3c449ee03cee0fe05d61a9770e1bce9aff",
-          "bytes": 26252,
+          "sha256": "0efc3febde00e2f1af1eb2772ed3c63898ad799b6622c3ad073f2b3d2bdf4d19",
+          "bytes": 28193,
           "mode": "100644"
         },
         "references/file-delivery.md": {
@@ -38,8 +38,8 @@
           "mode": "100644"
         },
         "references/output-contract.md": {
-          "sha256": "a6173cfe178b43edcc65810b38c955ac4fda83411f0851b70244c388b8d5fe51",
-          "bytes": 12424,
+          "sha256": "160fdf633a4890ad0d5211a20c8957340386e15a1ee051c6cce45dbfc54a3185",
+          "bytes": 12754,
           "mode": "100644"
         },
         "scripts/write_package.py": {

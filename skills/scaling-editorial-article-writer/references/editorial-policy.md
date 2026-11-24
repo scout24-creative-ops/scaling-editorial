@@ -11,6 +11,7 @@ Aus den am 19.11.2026 bereitgestellten Article-Writer-Instructions übernommen. 
 - Eingabe und Quellenbasis
 - Übergabe aus dem Story Creator
 - Redaktionelle Führung
+- Prägnanz und notwendige Einordnung
 - Journalistischer Stil
 - Zielgruppe, Vorwissen und verständliche Vermittlung
 - Leserinteresse und Storytelling
@@ -102,6 +103,17 @@ Story und Leserinteresse haben Vorrang vor Informationsvollständigkeit. Wähle 
 Unterscheide bei Briefing-Inhalten zwischen notwendigem Artikelstoff, ergänzendem journalistischem Material und reiner Rechercheabsicherung. Methodische Prüfungen, Gegenchecks und Do-not-claim-Regeln steuern deine Aussagen, gehören aber nicht automatisch in den Artikel. Erkläre methodische Details nur, wenn sie für das korrekte Verständnis einer tatsächlich verwendeten Aussage erforderlich sind. Führe keine komplizierten oder irreführenden Vergleiche nur ein, um sie anschließend zu widerlegen.
 
 Bei Widersprüchen haben belegte Fakten und Aussagegrenzen immer Vorrang vor dramaturgischen Empfehlungen.
+
+## Prägnanz und notwendige Einordnung
+
+Führe nach dem Schreiben und vor der Ausgabe einen gezielten redaktionellen Kürzungsdurchgang für Intro und Artikel aus:
+
+- Prüfe den Beitrag jedes Absatzes zur Leserfrage. Er muss eine neue relevante Information, eine notwendige Erklärung oder eine hilfreiche Einordnung liefern. Streiche entbehrliche Einschübe; fasse Absätze mit demselben Beitrag zusammen.
+- Führe bereits erklärte Zusammenhänge, Fakten und Einschränkungen nur erneut aus, wenn dadurch ein zusätzlicher Erkenntnisgewinn entsteht. Erhalte notwendige Bezüge und Übergänge, statt den Text durch mechanisches Entfernen gleicher Wörter unverständlich zu machen.
+- Erläutere methodische und rechtliche Einschränkungen dort, wo sie die korrekte Interpretation einer verwendeten Aussage beeinflussen: möglichst einmal und unmittelbar bei der betreffenden Aussage. Interne Rechercheabsicherung und selbstverständliche Zusammenhänge müssen nicht vorsorglich im Artikel stehen.
+- Streiche defensive Formulierungen wie „Das bedeutet nicht, dass …“, wenn keine konkrete Fehlinterpretation naheliegt. Bei einer tatsächlichen Interpretationsgefahr die erforderliche Erklärung präzise erhalten; die Formulierung ist nicht pauschal verboten.
+
+Kürze ohne Sinnverlust: Belegte Kernaussagen, Quellenbezüge, relevante Bezugszeiträume und sachlich notwendige Aussagegrenzen bleiben erhalten. Insbesondere Angebots-/Inseratsdaten nicht durch Weglassen einer relevanten Einordnung als tatsächlichen Wohnungsbestand erscheinen lassen. Eine neue Information oder einen notwendigen Unterschied nicht als Wiederholung behandeln. Nach dem Kürzen Aussage und Verständlichkeit gegen das Story Package prüfen und die bestehende Wortzählung erneut ausführen. Dieser Durchgang erzeugt keinen zusätzlichen Pflichtabschnitt im Article Package und keine längere Prüfprotokoll-Ausgabe.
 
 ## Journalistischer Stil
 
