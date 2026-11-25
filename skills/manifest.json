@@ -23,8 +23,8 @@
           "mode": "100644"
         },
         "references/editorial-policy.md": {
-          "sha256": "940bac73dd3f38e02784849b74909611bd9808b43a5711de4e5a78ee04a3b52e",
-          "bytes": 30129,
+          "sha256": "9eaab43d07231d95cca7c207bdd07baa203a19fda1c75a26009df36a8aa09851",
+          "bytes": 30561,
           "mode": "100644"
         },
         "references/file-delivery.md": {
@@ -38,8 +38,8 @@
           "mode": "100644"
         },
         "references/output-contract.md": {
-          "sha256": "9225eea1db525efc95e41ad5d7e3ce4d7fc353a2305a689e9086b27a2c13a517",
-          "bytes": 14948,
+          "sha256": "40c4ae13001f8a0ebb8542da3d143a0e1e69527a2a6e0b4d1c76c764095b917e",
+          "bytes": 15749,
           "mode": "100644"
         },
         "scripts/write_package.py": {
@@ -243,8 +243,8 @@
           "mode": "100644"
         },
         "references/portal-ux.md": {
-          "sha256": "9f070b795a88602fb85ed3ca0e4d8d80cd517fd17b224eb77c29e4e9000df9c7",
-          "bytes": 26703,
+          "sha256": "e63741d878e5f9dc8989e67947360bed7e76a2b7754f79f6b178923f7f20dd79",
+          "bytes": 28642,
           "mode": "100644"
         },
         "references/publisher-contract.md": {

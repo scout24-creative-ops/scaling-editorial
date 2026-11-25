@@ -59,6 +59,24 @@ Use this category composition with a split image-left / headline-intro-byline-ri
 
 Set `loading="eager" fetchpriority="high"` only on the title image in the existing article media figure. Preserve all image dimensions, crop roles, classes and visual layout; keep other article-composition images lazy-loaded. Run the scoped pre-/post-write checks in [article-html-checks.md](article-html-checks.md). Narrow unrelated edits retain unchanged legacy attributes under that reference's baseline rules.
 
+### Tabellen im Artikeltext
+
+Übernimm nur die im Article Package tatsächlich enthaltene Vergleichstabelle. Lies Kopf, GFM-Trennzeile und Zeilen vollständig; `---:` markiert eine rechtsbündige Zahlenspalte. Bewahre Reihenfolge, Werte, Einheiten, Titel, Quelle und Aussagegrenzen. Den unmittelbar vorangestellten `**Tabellentitel:** …` einmal als `<caption>` ausgeben, nicht zusätzlich als Absatz. Bei uneindeutiger Übergabe keine Werte ergänzen, Zeilen verschieben oder Spalten fallenlassen; kläre den konkreten Konflikt. Keine Tabelle aus Fließtext erfinden.
+
+Verwende das vorhandene statische COSMA-Muster innerhalb von `.lpb-editorial-article__body`:
+
+```html
+<div class="table-container scrollable margin-bottom-m palm-margin-bottom-l" role="region" aria-labelledby="artikel-tabelle-1" tabindex="0">
+  <table class="table table--small">
+    <caption id="artikel-tabelle-1" class="font-body-medium-bold align-left">Tabellentitel aus dem Article Package</caption>
+    <thead><tr><th class="table-header-cell table-cell align-left" scope="col">Merkmal</th><th class="table-header-cell table-cell align-right" scope="col">Wert (Einheit)</th></tr></thead>
+    <tbody><tr class="table-row"><td class="table-cell font-body-large-regular">Text</td><td class="table-cell font-body-large-regular align-right">Wert</td></tr></tbody>
+  </table>
+</div>
+```
+
+Nutze eindeutige Caption-IDs pro Seite, korrekt escaped Zelltexte und Rechtsbündigkeit nur für Zahlenspalten. Kein neues CSS, JavaScript, keine Sortierung. Prüfe vor CMS-Speicherung und nach Rücklesen, dass Tabellenkopf, Anzahl und Reihenfolge der Zellen, Caption, Werte, Quellenbezüge und Aussagen unverändert sind. In der Vorschau prüfen: Fließtextgröße in Zellen, Abstand unten, kompakte Tabelle auf Mobil; bei Bedarf darf nur die benannte, fokussierbare Tabellenregion horizontal scrollen, nicht der Artikel. Teaser, Listen und übrige Module bleiben unverändert.
+
 Use this article composition with the retained internal Article V2 structure and existing `scaling-editorial-author` component, plus a compact Weiterlesen rail and existing rental examples in the right column. Keep the complete body, sources and caption; do not copy the UX reference's shortened body over a real article. Apply the approved **H1 → author/meta → exact full intro (20/30 px, unchanged colour) → complete title-image figure/caption → body/sources** order. The headline header contains no intro; the intro is a sibling after the complete meta block and before the figure. Use only the exact intro-only inline typography exception above. No Google preference button, article-statistics/Markt-in-60-Sekunden block or SuchenPlus block, empty wrapper, replacement CTA or leftover component gap. Preserve the article's outer main/sidebar layout and the terminal direct `lpb-spacer--4xl` (80 px in the verified renderer); do not simulate the gap with empty modules or padding. Align the article H1 top edge with Weiterlesen on desktop. For ordinary UX drafts omit an unsolicited pilot notice and its wrapper. Preserve an existing explicitly scoped pilot notice and other historical author content during unrelated partial edits; new assignments require the confirmed real Inga/Julia record. At narrow widths the retained rail/rentals follow the complete main column in DOM order. No nested Page Modules, publication or new Runtime dependency. This contract governs all new regular article pages; apply it to existing pages only under an actual scoped update/rollout order, not automatically during an unrelated edit.
 
 ## scaling-editorial-ux-teaser
