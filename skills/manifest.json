@@ -183,8 +183,8 @@
       "requires_skills": [],
       "files": {
         "SKILL.md": {
-          "sha256": "5c831f5e33e4e8d7fb80fca25a6d51b32158e52d3c684855713a8723a482e099",
-          "bytes": 22281,
+          "sha256": "a623621a455f2f2f1e71970a8dabacc7426201549d55d274df59798502bab4a5",
+          "bytes": 22004,
           "mode": "100644"
         },
         "agents/openai.yaml": {
