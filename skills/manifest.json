@@ -8,8 +8,8 @@
       ],
       "files": {
         "SKILL.md": {
-          "sha256": "60c2f85f0e7920a02089ded56583fad2782d1b8859e9ce0181606cf3932d3b77",
-          "bytes": 6904,
+          "sha256": "1e55ef2e1bd24b0bdd899516aeba3b2858d286ebd5776505f72d13ca9c35e667",
+          "bytes": 6905,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -88,8 +88,8 @@
       "requires_skills": [],
       "files": {
         "SKILL.md": {
-          "sha256": "65a2f950a2319f5c1e53a4621a1be8e574433d0efeef2b6e063182cf06e7daa8",
-          "bytes": 23962,
+          "sha256": "4507c5f0883e8dee43ce699d91c7e43590d58d846c05c74993face767d6366b4",
+          "bytes": 23963,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -183,8 +183,8 @@
       "requires_skills": [],
       "files": {
         "SKILL.md": {
-          "sha256": "6ae0a6562e9907064e12115190c87a023d688a91e0d4f30d7d17d369e4411dfc",
-          "bytes": 22087,
+          "sha256": "5360870030a45b90cf2d51728bef448960ede5837a59263970178ec2b982ac6f",
+          "bytes": 22088,
           "mode": "100644"
         },
         "agents/openai.yaml": {

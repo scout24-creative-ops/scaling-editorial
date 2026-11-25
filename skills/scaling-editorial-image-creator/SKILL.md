@@ -1,7 +1,8 @@
 ---
 name: scaling-editorial-image-creator
-description: "Erstellt redaktionelle ImmoScout24-Bildmotive aus dem fertigen Artikel und exportiert zwei 16:9-WebPs: 1920 × 1080 für Titel/große Teaser und 480 × 270 für kleine News- und Weiterlesen-Teaser. Prüft die Original-Frontify-KI-Kennzeichnung je Ausgabe. Erstellt separat beauftragte quadratische WebP-Autorenporträts. Nicht für reine Text- oder Headline-Tests. Frühere Namen: se-image-creator, scout24-editorial-imagery."
+description: 'Erstellt redaktionelle ImmoScout24-Bildmotive aus dem fertigen Artikel und exportiert zwei 16:9-WebPs: 1920 × 1080 für Titel/große Teaser und 480 × 270 für kleine News- und Weiterlesen-Teaser. Prüft die Original-Frontify-KI-Kennzeichnung je Ausgabe. Erstellt separat beauftragte quadratische WebP-Autorenporträts. Nicht für reine Text- oder Headline-Tests. Frühere Namen: se-image-creator, scout24-editorial-imagery.'
 ---
+
 
 # Scaling Editorial – Image Creator (MVP)
 
