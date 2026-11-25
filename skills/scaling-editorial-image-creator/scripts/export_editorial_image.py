@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Export an editorial WebP editorial image roles or PNG avatar, adding the supplied Frontify AI label after cropping."""
+"""Export two 16:9 editorial WebP roles or a square WebP avatar, adding the supplied Frontify AI label after cropping."""
 
 import argparse
 import hashlib
 import json
 from pathlib import Path
-import shutil
 
 from PIL import Image, ImageOps, ImageStat, features
 
@@ -71,14 +70,14 @@ def export_image(source: Path, destination: Path, kind: str, label: str = "creat
                  label_style: str = "auto", corner: str = "bottom-right",
                  label_width: int | None = None, margin: int | None = None,
                  label_reason: str | None = None, quality: int = 85) -> dict:
-    sizes = {"title": (1920, 1080), "teaser": (1536, 864), "compact": (480, 320), "avatar": (240, 240)}
-    ratios = {"title": (16, 9), "teaser": (16, 9), "compact": (3, 2), "avatar": (1, 1)}
+    sizes = {"title": (1920, 1080), "compact": (480, 270), "avatar": (240, 240)}
+    ratios = {"title": (16, 9), "compact": (16, 9), "avatar": (1, 1)}
     target = sizes[kind]
-    output_format = "PNG" if kind == "avatar" else "WEBP"
-    extension = ".png" if kind == "avatar" else ".webp"
-    if kind != "avatar" and (not isinstance(quality, int) or isinstance(quality, bool) or not 1 <= quality <= 100):
+    output_format = "WEBP"
+    extension = ".webp"
+    if (not isinstance(quality, int) or isinstance(quality, bool) or not 1 <= quality <= 100):
         raise ValueError("WebP quality must be an integer from 1 to 100.")
-    if kind != "avatar" and not features.check("webp"):
+    if not features.check("webp"):
         raise ValueError("WebP encoding is unavailable in this Pillow installation.")
     if label not in ("created", "modified", "none"):
         raise ValueError("Unknown label type.")
@@ -100,8 +99,6 @@ def export_image(source: Path, destination: Path, kind: str, label: str = "creat
     with Image.open(source) as original:
         original.load()
         original_size = original.size
-        original_format = original.format
-        orientation = original.getexif().get(274, 1)
         image = ImageOps.exif_transpose(original)
         width, height = image.size
         rw, rh = ratios[kind]
@@ -112,41 +109,24 @@ def export_image(source: Path, destination: Path, kind: str, label: str = "creat
         left = (width - crop_width) // 2
         top = (height - crop_height) // 2
         box = (left, top, left + crop_width, top + crop_height)
-        unchanged = (kind == "avatar" and label == "none" and original_format == "PNG"
-                     and orientation == 1 and image.size == target)
-        label_info = {"type": "none", "reason": label_reason}
-        if unchanged:
-            with source.open("rb") as incoming, destination.open("xb") as outgoing:
-                shutil.copyfileobj(incoming, outgoing)
-        else:
-            result = image.crop(box)
-            if result.size != target:
-                result = result.resize(target, Image.Resampling.LANCZOS)
-            if result.mode not in ("RGB", "RGBA"):
-                result = result.convert("RGBA" if "transparency" in result.info else "RGB")
-            if kind == "compact" and label != "none":
-                # User-confirmed 24 Nov: only the small overview list omits the visible mark.
-                # Preserve AI provenance even though no original artwork is composited.
-                label_info = {
-                    "type": f"AI {label}",
-                    "visible_label_applied": False,
-                    "omission_scope": "Small 120x80 overview list teaser only",
-                    "reason": label_reason or "Newly AI-created image.",
-                    "omission_reason": "Visible label omitted for this role by user instruction on 2026-11-24.",
-                }
-            elif label != "none":
-                result, label_info = _apply_label(
-                    result, label, label_style, corner,
-                    label_width if label_width is not None else {"title": 192, "teaser": 256, "avatar": 88}[kind],
-                    margin if margin is not None else (8 if kind == "avatar" else 24),
-                )
-                label_info["reason"] = label_reason or "Newly AI-created image."
-                label_info["visible_label_applied"] = True
-            with destination.open("xb") as outgoing:
-                if output_format == "WEBP":
-                    result.save(outgoing, format="WEBP", quality=quality, method=6, lossless=False)
-                else:
-                    result.save(outgoing, format="PNG")
+        lossless = kind == "avatar"
+        result = image.crop(box)
+        if result.size != target:
+            result = result.resize(target, Image.Resampling.LANCZOS)
+        if result.mode not in ("RGB", "RGBA"):
+            result = result.convert("RGBA" if "transparency" in result.info else "RGB")
+        label_info = {"type": "none", "reason": label_reason, "visible_label_applied": False}
+        if label != "none":
+            result, label_info = _apply_label(
+                result, label, label_style, corner,
+                label_width if label_width is not None else {"title": 192, "compact": 175, "avatar": 88}[kind],
+                margin if margin is not None else {"title": 24, "compact": 15, "avatar": 8}[kind],
+            )
+            label_info["reason"] = label_reason or "Newly AI-created image."
+            label_info["visible_label_applied"] = True
+        with destination.open("xb") as outgoing:
+            settings = {"icc_profile": original.info["icc_profile"]} if "icc_profile" in original.info else {}
+            result.save(outgoing, format="WEBP", quality=quality, method=6, lossless=lossless, **settings)
 
     with Image.open(destination) as check:
         check.load()
@@ -162,11 +142,11 @@ def export_image(source: Path, destination: Path, kind: str, label: str = "creat
         "crop_box": list(box),
         "dimensions": list(target),
         "format": output_format,
-        "quality": quality if output_format == "WEBP" else None,
-        "encoding": "lossy" if output_format == "WEBP" else "lossless",
+        "quality": quality if not lossless else None,
+        "encoding": "lossless" if lossless else "lossy",
         "bytes": destination.stat().st_size,
         "sha256": hashlib.sha256(destination.read_bytes()).hexdigest(),
-        "source_copied_unchanged": unchanged,
+        "source_copied_unchanged": False,
         "ai_label": label_info,
     }
 
@@ -175,8 +155,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", type=Path)
     parser.add_argument("destination", type=Path)
-    parser.add_argument("--kind", choices=("title", "teaser", "compact", "avatar"), default="title")
-    parser.add_argument("--quality", type=int, default=85, help="WebP editorial image quality, 1-100 (default: 85); avatars stay PNG.")
+    parser.add_argument("--kind", choices=("title", "compact", "avatar"), default="title")
+    parser.add_argument("--quality", type=int, default=85, help="WebP editorial image quality, 1-100 (default: 85); portrait export is lossless WebP.")
     parser.add_argument("--label", choices=("created", "modified", "none"), default="created")
     parser.add_argument("--label-reason", help="Required for modified or none; record actual provenance/edit.")
     parser.add_argument("--label-style", choices=("auto", "positive", "negative", "negative-transparent"), default="auto")

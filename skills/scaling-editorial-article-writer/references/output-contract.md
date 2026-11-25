@@ -18,7 +18,7 @@ Beginne die Package-Datei ohne Vorrede direkt mit der Paketüberschrift exakt al
 
 Verwende keine Paketnummer und keine BEGINN-/ENDE-Marker. Formatiere Hauptabschnitte als echte Überschriften zweiter Ebene und Zwischenüberschriften innerhalb des Artikels als Überschriften dritter Ebene. Nutze fett gesetzte Feldbezeichnungen sowie normale Schrift für Werte und Fließtext.
 
-Verwende für das Package keinen Schreibblock, Codeblock oder Canvas. Gib im Chat den tatsächlichen Package-Download und eine knappe Statusmeldung aus, keine zusätzliche vollständige Artikelausgabe. Die finalen Downloads für Titelbild und beide Teaserrollen bleiben separat.
+Verwende für das Package keinen Schreibblock, Codeblock oder Canvas. Gib im Chat den tatsächlichen Package-Download und eine knappe Statusmeldung aus, keine zusätzliche vollständige Artikelausgabe. Die finalen Downloads für Titelbild/große Teaser und Kompaktbild bleiben separat.
 
 Direkt unter `# Article Package` steht dieser kompakte Bullet-Block; ersetze die Platzhalter durch die tatsächlich vorliegenden Angaben:
 
@@ -93,22 +93,17 @@ Verwende ausschließlich tatsächlich übergebene interne URLs aus dem Story Pac
 - **Bildunterschrift:** vom Bild-Skill zurückgegeben
 - **Kennzeichnung:** vom Bild-Skill zurückgegeben
 - **Bildnachweis:** tatsächlich gelieferte Urheber-, Quellen- und Lizenzangaben aus dem Bild-Skill oder Story Package; fehlende erforderliche Nachweise konkret kennzeichnen
-- **Teaser-Dateiname:** tatsächlich vom Bild-Skill gelieferte große/mittlere Teaserdatei; andernfalls „Teaserdatei fehlt“
-- **Teaser-Abmessungen:** tatsächlich gemeldete Pixelmaße
-- **Teaser-Dateigröße:** tatsächlich gemeldete Bytes oder kB
-- **Teaser-Kennzeichnung:** tatsächlicher eigener Prüfstand, einschließlich offener kleiner Ausschnitte oder Label-Lesbarkeit
-- **Teaser-Bild-URL:** tatsächlich übergebene Hosting-URL; sonst `[TEASER-BILD-URL HIER EINFÜGEN]`
-- **Listenteaser-Dateiname:** tatsächlich gelieferte separate Datei für die kleine Übersichtsliste; andernfalls „Listenteaserdatei fehlt“
+- **Listenteaser-Dateiname:** tatsächlich gelieferte separate Datei für die kleinen News-Teaser und Weiterlesen; andernfalls „Listenteaserdatei fehlt“
 - **Listenteaser-Abmessungen:** tatsächlich gemeldete Pixelmaße
 - **Listenteaser-Dateigröße:** tatsächlich gemeldete Bytes oder kB
-- **Listenteaser-Kennzeichnung:** tatsächliche KI-Provenienz; bei generierten Bildern „KI-generiert; ohne sichtbares Bildlabel gemäß Vorgabe für kleine Listenteaser“
+- **Listenteaser-Kennzeichnung:** tatsächliche KI-Provenienz und sichtbarer Labelstatus; ein KI-Motiv hat auch im Kompaktbild das passende Label
 - **Listenteaser-Bild-URL:** tatsächlich übergebene Hosting-URL; sonst `[LISTENTEASER-BILD-URL HIER EINFÜGEN]`
 
 Erfinde keine Angaben zum Bildnachweis. Erhalte Alt-Text, Bildunterschrift, Kennzeichnung und den bestehenden Bild-Handoff.
 
 Bei ausdrücklich rein textlichen Aufgaben keine ausgeführte Bildarbeit behaupten.
 
-Wiederhole die große Titelbild-URL hier nicht. Die getrennten Teaser- und Listenteaser-Bild-URLs bezeichnen ausschließlich die tatsächlich gehosteten Dateien der jeweiligen Rolle; ein Download ist keine Hosting-URL. Fehlende Hosting-URLs und spätere Publisher-Zuordnung offen halten. Eine zusätzliche Bildbeschreibung ist nicht erforderlich, wenn Alt-Text und Bildunterschrift das Motiv ausreichend wiedergeben.
+Wiederhole die große Titelbild-URL hier nicht. Die Bild-URL im Metadatenblock gilt für Titelbild und große/mittlere Teaser. Die separate Listenteaser-Bild-URL gilt für kleine News-Teaser und Weiterlesen; ein Download ist keine Hosting-URL. Fehlende Hosting-URLs und spätere Publisher-Zuordnung offen halten. Eine zusätzliche Bildbeschreibung ist nicht erforderlich, wenn Alt-Text und Bildunterschrift das Motiv ausreichend wiedergeben.
 
 ## Offene Prüfungen
 
@@ -118,7 +113,7 @@ Sämtliche für die Übergabe benötigten Angaben müssen innerhalb des Article 
 
 Gib keinen langen technischen Publisher-Ablauf aus. Komponentenwahl, Slug-Prüfung, Duplikatprüfung, Read-back und tatsächliche Preview-URLs gehören zum Arbeitsablauf des Editorial Publishers. Führe selbst keine Contentful-Aktionen aus.
 
-Für Bildmetadaten, Motivauswahl, technischen Bildexport und den separaten Bilddownload gilt der Ausgabe-Vertrag von scaling-editorial-image-creator. Übernimm seine tatsächlichen Ergebnisse in die Article-Package-Datei. Gib im Chat nach dem Package-Download die drei belegten finalen Bilddownloads für Titelbild und beide Teaserrollen jeweils einmal aus; eine vollständige Chattext-Ausgabe des Packages oder deren abschließende Trennlinie ist dafür nicht erforderlich. Behalte den Bild-URL-Platzhalter bis zum Vorliegen einer tatsächlich verwendbaren Hosting-URL bei.
+Für Bildmetadaten, Motivauswahl, technischen Bildexport und den separaten Bilddownload gilt der Ausgabe-Vertrag von scaling-editorial-image-creator. Übernimm seine tatsächlichen Ergebnisse in die Article-Package-Datei. Gib im Chat nach dem Package-Download die zwei belegten finalen Bilddownloads für Titelbild/große Teaser und Kompaktbild jeweils einmal aus; eine vollständige Chattext-Ausgabe des Packages oder deren abschließende Trennlinie ist dafür nicht erforderlich. Behalte den Bild-URL-Platzhalter bis zum Vorliegen einer tatsächlich verwendbaren Hosting-URL bei.
 
 Wenn der Nutzer ausdrücklich nur Prüfung, Feedback, `HEADLINE_TEST` oder eine reine Überarbeitung verlangt, führe ausschließlich diese Aufgabe aus. Die SEO-Ergänzungen gelten für den normalen Artikelmodus. `HEADLINE_TEST` sowie ausdrücklich begrenzte Prüf-, Feedback- und Überarbeitungsaufträge behalten ihren bisherigen Umfang. Die bloße Übergabe eines Story Package ist dagegen der normale Artikelmodus und startet die vollständige Produktion.
 
@@ -138,7 +133,7 @@ Prüfe jeden Entwurf selbstständig:
 8. Entspricht die herunterladbare Markdown-Datei dem vollständigen Article-Package-Format, ohne angehängte Rechercheprotokolle, Schreibblock, Codeblock, Canvas oder parallele vollständige Artikelausgabe im Chat?
 9. Wurde bei einem Bildauftrag scaling-editorial-image-creator mit dem finalen Text verwendet und sein tatsächlich vorhandenes Ergebnis vollständig in die Übergabe übernommen beziehungsweise eine konkrete Einschränkung benannt?
 10. Kann ein interessierter Leser aus der konkret beschriebenen Zielgruppe ohne Spezialwissen die gesamte Geschichte, ihre Relevanz und die praktischen Schlussfolgerungen von Anfang bis Ende verstehen, ohne wichtige Begriffe oder Zusammenhänge selbst nachschlagen zu müssen?
-11. Sind der kompakte Metadatenblock einschließlich Bild-URL-Feld, die ausgewählte Headline, die zwei Headline-Alternativen ohne Auswahlbegründung, Introtext, SEO-Titel, Meta Description, vollständiger Artikel, ausgeschriebene Quellen-URLs, interne Linkvorschläge und Titelbildangaben einschließlich Bildnachweis und tatsächlich gelieferter Teaser-/Listenteaser-Dateiangaben vollständig innerhalb des Article Package enthalten?
+11. Sind der kompakte Metadatenblock einschließlich Bild-URL-Feld, die ausgewählte Headline, die zwei Headline-Alternativen ohne Auswahlbegründung, Introtext, SEO-Titel, Meta Description, vollständiger Artikel, ausgeschriebene Quellen-URLs, interne Linkvorschläge und Titelbildangaben einschließlich Bildnachweis und tatsächlich gelieferter Listenteaser-Dateiangaben vollständig innerhalb des Article Package enthalten?
 12. Sind alle im Artikel verwendeten Quellen mit ihren tatsächlich aus dem vollständigen Story Package übernommenen Original-URLs enthalten, vollständig und sichtbar ausgeschrieben und sind vorhandene genaue Dokumentpfade, relevante URL-Parameter, Veröffentlichungsdaten sowie Seitenangaben erhalten?
 13. Stimmen SEO-Titel, Meta Description, Headline, Introtext, Artikel und Titelbild in ihrer Aussage überein?
 14. Sind interne Linkvorschläge ausschließlich auf tatsächlich übergebene und verifizierte Ziele gestützt?

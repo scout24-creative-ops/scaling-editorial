@@ -1,46 +1,23 @@
-# Bildrollen und drei gehostete Dateien
+# Zwei gehostete WebPs, ein Motiv
 
-Aktuelle Vorgabe von Dominik, 24.11.2026. Diese Zuordnung präzisiert „dasselbe Bild“: ein ausgewähltes Motiv in drei Dateien. Sie ändert keine Bildfläche, Klassen, Abstände, Navigation oder URLs von Artikeln.
+Verbindlich für Magazin-Entwürfe seit 25.11.2026:
 
-## Eingaben und Zuordnung
+| Bestätigte Hosting-URL | WebP-Datei (16:9) | Verwendung |
+| --- | --- | --- |
+| `Bild-URL` | 1920 × 1080 | Artikelaufmacher, News-/Rubrik-Lead und mittlere Karten |
+| `Listenteaser-Bild-URL` | 480 × 270 | Kleine News-Teaser und Weiterlesen, jeweils bei 128 × 72 px |
 
-| Bestätigte Hosting-URL | Verwendung | Gelieferte Datei | Sichtbares AI-Label bei KI-Motiv |
-| --- | --- | --- | --- |
-| `Bild-URL` | Titelbild auf der Artikeldetailseite | WebP, 1920 × 1080 | Ja |
-| `Teaser-Bild-URL` | Großer News-Aufmacher, großer Rubrikteaser, mittlere Artikelkacheln | WebP, 1536 × 864 | Ja |
-| `Listenteaser-Bild-URL` | Kleine 120 × 80-Teaser rechts auf News | WebP, 480 × 320, 3:2 | Nein; ausdrückliche Ausnahme nur für diese Rolle |
+Bei KI-generierten Motiven enthalten beide Dateien das Original-Label „AI Created“, bei wesentlich KI-bearbeiteten das passende „AI modified“. Die frühere Ausnahme für kleine News-Teaser entfällt. Maß und Rahmen erhalten; das vollständige Label soll im kleinen Slot sichtbar sein und nicht abgeschnitten werden. Keine dritte Bilddatei oder separate unmarkierte Variante. Authentische Fotos, graue Platzhalter und unveränderte echte Porträts erhalten kein falsches KI-Label. Autorinnenporträts verwenden die registrierten quadratischen 240 × 240-WebPs und bleiben im Layout rund. Keine aus dieser Entwurfsregel abgeleitete rechtliche Freigabe oder Livegang.
 
-Die Rolle wird nach der konkreten Komponente gewählt, nicht nach Seitenname oder zufälliger bisheriger Position: `lpb-image--responsive` innerhalb der Artikel-Bildfigur → Titelbild; `lpb-editorial-ux-card__image` und `lpb-editorial-ux-category-lead__image` → große/mittlere Teaserdatei; `lpb-editorial-ux-compact__image` → Listenteaserdatei. Die kanonischen HTML-Abmessungen und Seitenverhältnisse der jeweiligen Komponente bleiben erhalten. Eine Aufmacher-zu-Liste-Umplatzierung wechselt die Datei, nicht das Layout oder das Motiv.
+## Abfragen und speichern
 
-Die getrennten 80 × 56-Weiterlesen-Bilder auf Artikeldetailseiten, Autorenporträts, Beispielimmobilien und andere Module sind nicht Bestandteil dieser Umstellung. Erhalte deren vorhandene Bilder. Die Ausnahme für fehlendes sichtbares Label nicht darauf ausdehnen. Alttext, Quellen, Rechtehinweise und KI-Herkunft bleiben auch bei der kleinen Liste korrekt; setze kein erfundenes Label auf eine authentische Aufnahme.
+Bestätige für Standardaufträge beide vollständigen, voneinander verschiedenen HTTPS-WebP-URLs und die Autorin. Wiederhole bereits dafür beantwortete Fragen nicht. Für einen ausdrücklich reinen Artikelauftrag genügt die große URL. Verwende weder Downloadlinks noch abgeleitete/erfundene URLs. Keine Bildgenerierung, Umrechnung oder Uploads durch den Publisher.
 
-Hole für einen neuen Standard-Artikeleinbau Autorin und alle drei vollständigen Hosting-URLs gebündelt ein. Bereits ausdrücklich persönlich bestätigte Rollen im aktuellen Einbaudialog nicht erneut abfragen; fehlen einzelne, frage nur diese nach. Package-Felder können die Bestätigung vorbereiten, ersetzen sie aber nicht. Download-/Library-Links, lokale Pfade und Platzhalter gelten nicht als Hosting. Erfinde keine Ableitungen durch Dateinamenwechsel, Parameter, Bild-CDN-Pfade oder Hosttausch. Verwende drei eindeutige tatsächlich bestätigte URLs, keine stillschweigende Kopie des Titelbildes in alle Rollen. Keine Bildgenerierung, Umrechnung oder Uploads im Publisher.
+Auf dem vorhandenen Artikelroot `div.lpb-editorial-ux--article` nur `data-lpb-image-title-url` und `data-lpb-image-list-url` hinterlegen (nur bekannte Rollen bei Artikel-only). Kein drittes Attribut, kein neues Contentful-Feld. Verwende bei Umplatzierungen nur bestätigte Werte aus dem Artikelroot, Package oder belegtem Einbaustand. Bei älteren Einträgen fehlende Rollen gezielt klären statt Dateien abzuleiten oder automatisch zu migrieren. Ein unberührter Altbestand wird nicht umgebaut. Dokumentiere bei einem ohnehin beauftragten Wiki-Schritt die zwei URLs und den Prüfstatus unter Umsetzung; Original-Package unverändert lassen.
 
-Bei einem ausdrücklich auf die Artikelseite begrenzten Auftrag ist nur die Titelbild-URL nötig; fehlende Teaserrollen bleiben offen. Unverwandte Bestandskorrekturen lösen keine neue Bildabfrage oder Bildmigration aus. Eine neue Bildrolle darf nicht aus der sichtbaren Größe einer alten Datei erschlossen werden.
+- Titelbild `lpb-image--responsive` in der Bildfigur, `lpb-editorial-ux-card__image` und `lpb-editorial-ux-category-lead__image`: große URL, `width="1920" height="1080"`.
+- `lpb-editorial-ux-compact__image` und verlinktes `lpb-editorial-ux-reading__image`: kompakte URL des jeweils verlinkten Artikels, `width="128" height="72"` und beauftragter Inline-Stil laut Portal-UX. Dieselbe kompakte URL für beide Slots. Beim Wechsel von Lead zu Liste die Datei bewusst wechseln.
 
-## Zuordnung für Fortsetzungen erhalten
+## Vor- und Rückleseprüfung
 
-Speichere bei neuen Standardartikeln die drei bestätigten URLs zusätzlich als reine Datenattribute auf dem vorhandenen `div.lpb-editorial-ux--article`:
-
-- `data-lpb-image-title-url`
-- `data-lpb-image-teaser-url`
-- `data-lpb-image-list-url`
-
-Dies sind zugelassene HTML-Metadaten für den Publisher, keine neuen Contentful-Felder, Styles oder Frontend-Funktionen. Setze echte bestätigte Werte mit normalem HTML-Attribut-Escaping ein; keine Leerwerte oder Vorlagenmarker speichern. Das kanonische Library-Beispiel kennzeichnet die einzusetzenden Werte. Bei einem engeren Artikelauftrag nur die tatsächlich bekannten Rollen hinterlegen.
-
-Beim Umplatzieren eines vorhandenen Artikels seine vollständige bestätigte Zuordnung aus dem aktuellen Artikel-HTML, dem tatsächlich verfügbaren Package oder dem dokumentierten Einbaustand verwenden. Wenn nötig den verifizierten Artikel derselben Site lesen. Nicht die aktuell sichtbare kleine Datei ohne Label in den Aufmacher übernehmen. Fehlt die neue benötigte Rolle, gezielt klären und nur davon abhängige Änderungen stoppen. Unberührte Legacy-Bildbelegungen bleiben erhalten; keine automatische Massennachrüstung. Vorhandene Metadaten bei reinen Fremdänderungen nicht verändern.
-
-Die drei beim Einbau persönlich gewählten URLs und ihr Rollen-/Kennzeichnungsstand werden unter **Umsetzung** in der ohnehin beauftragten Produktionsakte dokumentiert. Das originale Writer-Package mit ursprünglichen Platzhaltern bleibt unverändert archiviert. Ein reiner CMS-Auftrag bleibt ohne Wiki-Schreibschritt.
-
-## Prüfung vor dem Speichern und nach dem Rücklesen
-
-Prüfe das vollständige vorbereitete HTML und danach das vollständig zurückgelesene HTML mit `scripts/check_image_roles.py`. Nutze explizite lokale Dateien und sicher gequotete Argumente; URLs mit Parametern nicht als Shell-Code interpolieren.
-
-- Artikelseite: `--mode article --title-url … --teaser-url … --list-url …`.
-- Je Übersicht: `--mode overview` mit denselben drei URLs und `--article-href` aus dem echten verifizierten Linkziel. Der Check prüft nur die ausgewählte Artikelidentität, nicht sämtliche Bestandsbilder gegen dieselben URLs.
-- Rücklesen: zusätzlich `--expected-html` mit der erfolgreich vorgeprüften Eingabe, ohne diese danach zu überschreiben.
-- Ausschließlich bei bewusst engem Artikelauftrag darf `--article-only` mit der tatsächlichen Titel-URL benutzt werden. Das ist keine Umgehung fehlender Rollen im Standardauftrag.
-
-Der Helfer prüft URL-Sicherheit und eindeutige Rollenwerte, das Titelbild und die drei gespeicherten Datenattribute, die zur Teaservariante passende Datei, kanonische Seitenverhältnisse bzw. 120 × 80, genau ein ausgewähltes Bild pro Ziel und die erhaltenen Bildattribute beim Rücklesen. Ungeprüfte `picture`-/`srcset`-Quellen dürfen die Rollen nicht umgehen. Der Helfer liest nur und verändert oder lädt nichts. Er belegt keine Servererreichbarkeit, echten Dateipixel, Dateigröße, Bildqualität, Kennzeichnung im Bild oder Browserdarstellung.
-
-Bei fehlendem Python dieselben Zuordnungen auf vollständiger Eingabe und Rücklesefassung nachvollziehbar mit einem anderen Parser prüfen; keinen ausgeführten Helfer behaupten. Ein nicht verlässlich geprüfter oder fehlerhafter Rollenabgleich stoppt davon abhängige Writes/Platzierungen. Bei gespeichertem Teilstand die bestätigten IDs erhalten und konkret melden, was noch offen ist.
+Validiere vollständige Eingabe und Rücklesefassung mit `scripts/check_image_roles.py --html … --mode article --title-url … --list-url …`. Für Übersichten `--mode overview --article-href …` mit dem exakt verifizierten Ziel, beim Rücklesen zusätzlich `--expected-html …`. Bei ausdrücklich reinem Artikelauftrag `--article-only` und nur die Titel-URL. Prüfe für verlinktes Weiterlesen die kompakte URL des verlinkten Artikels auf dieselbe Weise (als einzelnes Linkziel in `--mode overview`); unverlinkte Beispielinserate sind keine Empfehlungen. Der Helfer prüft HTML/URL-Zuordnung und deklarierte Maße, nicht Server, echte Pixel, Dateityp-Bytes, Gewicht oder sichtbare KI-Kennzeichnung. Prüfe letztere an tatsächlichen Assets/Previews, sofern zugänglich. Fehlt eine verlässliche Rollenprüfung, stoppe davon abhängige Writes und melde die konkrete Lücke.

@@ -2,7 +2,7 @@
 
 ## Authority and current inputs
 
-Read this file, editorial-policy.md and portal-config.json before composing or updating a UX page. This file takes precedence for current layout, spacing, navigation, teaser variants and intro position. [image-roles.md](image-roles.md) selects the correct hosted file within those unchanged roles; no new layout, crop ratio, CSS or visible label overlay is introduced. The local author registry, source integrity, compact image-caption rule and transport requirements remain binding. The current Publisher requires personal author/image selection, both overview placements and draft-only operation; old unassigned/TEXT_TEST or publication exceptions are inactive. Legacy module-specific layout rules apply only to the corresponding explicitly retained legacy layouts.
+Read this file, editorial-policy.md and portal-config.json before composing or updating a UX page. This file takes precedence for current layout, spacing, navigation, teaser variants and intro position. [image-roles.md](image-roles.md) selects the correct hosted file within the current 16:9 layout; use only the scoped markup overrides in Aktueller Magazin-Bildstandard, no global CSS or overlay. The local author registry, source integrity, compact image-caption rule and transport requirements remain binding. The current Publisher requires personal author/image selection, both overview placements and draft-only operation; old unassigned/TEXT_TEST or publication exceptions are inactive. Legacy module-specific layout rules apply only to the corresponding explicitly retained legacy layouts.
 
 Source: user-supplied SE-Editorial-Publisher-Uebergabe-2026-11-12.zip, documented draft composition of 07.11.2026. A read-only CMS comparison on 12.11.2026 found later navigation and author/content changes. Keep the current three-entry configuration instead of restoring the earlier five tabs. Source reproduction tests prove the historical fixture contracts, not present-day publication or visual acceptance.
 
@@ -69,23 +69,23 @@ Verwende das vorhandene statische COSMA-Muster innerhalb von `.lpb-editorial-art
 <div class="table-container scrollable margin-bottom-m palm-margin-bottom-l" role="region" aria-labelledby="artikel-tabelle-1" tabindex="0">
   <table class="table table--small">
     <caption id="artikel-tabelle-1" class="font-body-medium-bold align-left">Tabellentitel aus dem Article Package</caption>
-    <thead><tr><th class="table-header-cell table-cell align-left" scope="col">Merkmal</th><th class="table-header-cell table-cell align-right" scope="col">Wert (Einheit)</th></tr></thead>
-    <tbody><tr class="table-row"><td class="table-cell font-body-large-regular">Text</td><td class="table-cell font-body-large-regular align-right">Wert</td></tr></tbody>
+    <thead><tr><th class="table-header-cell table-cell align-left padding-left-none" scope="col">Merkmal</th><th class="table-header-cell table-cell align-right" scope="col">Wert (Einheit)</th></tr></thead>
+    <tbody><tr class="table-row"><td class="table-cell font-body-large-regular padding-left-none">Text</td><td class="table-cell font-body-large-regular align-right">Wert</td></tr></tbody>
   </table>
 </div>
 ```
 
-Nutze eindeutige Caption-IDs pro Seite, korrekt escaped Zelltexte und Rechtsbündigkeit nur für Zahlenspalten. Kein neues CSS, JavaScript, keine Sortierung. Prüfe vor CMS-Speicherung und nach Rücklesen, dass Tabellenkopf, Anzahl und Reihenfolge der Zellen, Caption, Werte, Quellenbezüge und Aussagen unverändert sind. In der Vorschau prüfen: Fließtextgröße in Zellen, Abstand unten, kompakte Tabelle auf Mobil; bei Bedarf darf nur die benannte, fokussierbare Tabellenregion horizontal scrollen, nicht der Artikel. Teaser, Listen und übrige Module bleiben unverändert.
+Nutze eindeutige Caption-IDs pro Seite und korrekt escaped Zelltexte. Die erste Spalte beginnt bündig mit dem Fließtext: Setze `padding-left-none` nur an ihre Kopfzelle und erste Datenzelle jeder Zeile; lasse den rechten Innenabstand und alle übrigen Zellen unverändert. Die erste Spalte bleibt linksbündig, Rechtsbündigkeit gilt nur für weitere Zahlenspalten. Kein neues CSS, JavaScript, keine Sortierung. Prüfe vor CMS-Speicherung und nach Rücklesen, dass Tabellenkopf, Anzahl und Reihenfolge der Zellen, Caption, Werte, Quellenbezüge und Aussagen unverändert sind. In der Vorschau prüfen: bündige erste Spalte, Fließtextgröße in Zellen, Abstand unten, kompakte Tabelle auf Mobil; bei Bedarf darf nur die benannte, fokussierbare Tabellenregion horizontal scrollen, nicht der Artikel. Teaser, Listen und übrige Module bleiben unverändert.
 
 Use this article composition with the retained internal Article V2 structure and existing `scaling-editorial-author` component, plus a compact Weiterlesen rail and existing rental examples in the right column. Keep the complete body, sources and caption; do not copy the UX reference's shortened body over a real article. Apply the approved **H1 → author/meta → exact full intro (20/30 px, unchanged colour) → complete title-image figure/caption → body/sources** order. The headline header contains no intro; the intro is a sibling after the complete meta block and before the figure. Use only the exact intro-only inline typography exception above. No Google preference button, article-statistics/Markt-in-60-Sekunden block or SuchenPlus block, empty wrapper, replacement CTA or leftover component gap. Preserve the article's outer main/sidebar layout and the terminal direct `lpb-spacer--4xl` (80 px in the verified renderer); do not simulate the gap with empty modules or padding. Align the article H1 top edge with Weiterlesen on desktop. For ordinary UX drafts omit an unsolicited pilot notice and its wrapper. Preserve an existing explicitly scoped pilot notice and other historical author content during unrelated partial edits; new assignments require the confirmed real Inga/Julia record. At narrow widths the retained rail/rentals follow the complete main column in DOM order. No nested Page Modules, publication or new Runtime dependency. This contract governs all new regular article pages; apply it to existing pages only under an actual scoped update/rollout order, not automatically during an unrelated edit.
 
 ## scaling-editorial-ux-teaser
 
-Embedded Component in UX lead/grid slots. One image, plain-text topic/category label and semantic headline; optional supplied intro/byline. Distinct variants: home-lead has the approved 16:9 image above its H1 and full intro, using only the exact News lead-image ratio style above; compact retains its 120×80 image left and text right; card retains its 16:9 image above a heading. Whole-card link only with a verified destination; otherwise unlinked article. Never nested anchors. Preserve real supplied dates/authors, never infer missing values from the example bylines or CMS timestamps.
+Embedded Component in UX lead/grid slots. One image, plain-text topic/category label and semantic headline; optional supplied intro/byline. Distinct variants: home-lead has the approved 16:9 image above its H1 and full intro, using only the exact News lead-image ratio style above; compact retains its 128×72 image left and text right; card retains its 16:9 image above a heading. Whole-card link only with a verified destination; otherwise unlinked article. Never nested anchors. Preserve real supplied dates/authors, never infer missing values from the example bylines or CMS timestamps.
 
 ## scaling-editorial-ux-home-lead
 
-Embedded composition of one lead position and five compact positions, with real articles allocated under news-selection.md including lower-row coverage and free positions represented by the approved unlinked placeholders. Retain desktop flex bases 420/280 with growth 2:1 and 32-px horizontal gap, recommendations separated by 24 px. Main image is 16:9 with the approved exact lead-only ratio style; compact images stay 120×80 px. Mobile lead first, recommendations next, preserving selected DOM order. No fixed total group height or clipping. Never apply the lead image rule to compact thumbnails or category pages. Canonical fixture content is illustrative, not real article inventory; show the current prescribed layout slots even where real articles are missing. The home section may carry a real explicitly selected data-lpb-news-pinned-entry-id under the selection reference; absence means chronological default, not a fixture pin.
+Embedded composition of one lead position and five compact positions, with real articles allocated under news-selection.md including lower-row coverage and free positions represented by the approved unlinked placeholders. Retain desktop flex bases 420/280 with growth 2:1 and 32-px horizontal gap, recommendations separated by 24 px. Main image is 16:9 with the approved exact lead-only ratio style; compact images are 128×72 px (480×270 source). Mobile lead first, recommendations next, preserving selected DOM order. No fixed total group height or clipping. Use the dedicated compact dimensions on the small News list. Canonical fixture content is illustrative, not real article inventory; show the current prescribed layout slots even where real articles are missing. The home section may carry a real explicitly selected data-lpb-news-pinned-entry-id under the selection reference; absence means chronological default, not a fixture pin.
 
 ## scaling-editorial-ux-category-lead
 
@@ -97,7 +97,7 @@ Embedded section with H2 and repeated complete teaser components. Grid uses auto
 
 ## scaling-editorial-ux-property-list
 
-Embedded section with an H2, visible example-data note and semantic list. Each non-interactive item has a 100×76 px image left, then supplied example location, price and facts. No active listing links, phone actions or data feed. Desktop grid min card width 300 px, gap 14 px; article rail naturally uses one column. Preserve mobile containment.
+Embedded section with an H2, visible example-data note and semantic list. Each non-interactive item has a 128×72 px image left, then supplied example location, price and facts. No active listing links, phone actions or data feed. Desktop grid min card width 300 px, gap 14 px; article rail naturally uses one column. Preserve mobile containment.
 
 ## scaling-editorial-ux-price-update
 
@@ -105,11 +105,11 @@ Embedded warm-grey rounded box with small badge, headline, prominent value/unit 
 
 ## scaling-editorial-ux-topic-worlds
 
-Embedded section with image tiles, dark lower gradient and white overlaid headings; gap 12 px, min tile width 260 px, height 120–180 px. Static labels only unless a real existing verified destination is supplied. Never invent topic/tag pages or filtering.
+Embedded section with image tiles, dark lower gradient and white overlaid headings; gap 12 px, min tile width 260 px, 16:9 tile aspect ratio. Static labels only unless a real existing verified destination is supplied. Never invent topic/tag pages or filtering.
 
 ## scaling-editorial-ux-suchenplus
 
-Retained for permitted Home/category and separately scoped other compositions, excluded from current regular article pages. Do not restore it below an article from a fixture. Where permitted, this is a bordered image/text module using a 4:3 image, desktop image-left (max 380 px) and copy/brand CTA right, mobile image first. Keep any unconnected CTA disabled and its local test state clear. Do not replace the 4:3 image with the hero or card ratio.
+Retained for permitted Home/category and separately scoped other compositions, excluded from current regular article pages. Do not restore it below an article from a fixture. Where permitted, this is a bordered image/text module using a 16:9 image, desktop image-left (max 380 px) and copy/brand CTA right, mobile image first. Keep any unconnected CTA disabled and its local test state clear. Do not replace the 16:9 image with the hero or card ratio.
 
 ## scaling-editorial-ux-preferred-source
 
@@ -121,7 +121,9 @@ Retained library component, excluded from the current regular article compositio
 
 ## scaling-editorial-ux-reading-list
 
-Embedded compact Weiterlesen variant, independent from the retained vertical-card `scaling-editorial-more-articles` default. Each item uses an 80×56 px image left, plain topic text and 12/16 px headline right. No intro or invented author/date. When using actual recommendations, exclude the current article and require verified destinations for one whole-item link; supplied UX dummy items remain unlinked. On mobile place the rail after the article, never between its paragraphs.
+Verlinkte Weiterlesen-Teaser verwenden exakt `<li><a class="lpb-editorial-ux-card__link" href="…"><img …><div>…</div></a></li>`: Bild und Textgruppe sind direkte Kinder desselben Links. Die vorhandene Klasse hält Bild und Text nebeneinander; ein nackter Link würde sie stapeln. Prüfe bei Rücklesen alle Teaser-Links auf diese Klasse und bei sichtbarer Vorschau mindestens Desktop und Mobil. Unverlinkte Platzhalter behalten Bild und Text direkt im `<li>`; keine Links erfinden und keine Stilregeln, Bilder, Texte oder Ziele zur Reparatur ersetzen.
+
+Embedded compact Weiterlesen variant, independent from the retained vertical-card `scaling-editorial-more-articles` default. Each item uses a 128×72 px image left (shared 480×270 file), plain topic text and 12/16 px headline right. No intro or invented author/date. When using actual recommendations, exclude the current article and require verified destinations for one whole-item link; supplied UX dummy items remain unlinked. On mobile place the rail after the article, never between its paragraphs.
 
 ## scaling-editorial-ux-breadcrumb
 
@@ -130,3 +132,7 @@ Compatibility-only Embedded Component. Do not render it in the current UX articl
 ## Optional author overlay preparation
 
 After the approved Magazine rollout on 20.11.2026, scaling-editorial-author-dialog is the active author component for new Magazine articles. Read author-dialog.md for the confirmed Wiki descriptions, portraits and LinkedIn text links. Preserve the component during unrelated edits; do not restore the test biography or old Julia surname. It changes only the name interaction, not article order, typography, image, sidebar or terminal spacing. No page script, arbitrary dialog or automatic rollout is allowed.
+
+## Aktueller Magazin-Bildstandard (25.11.2026)
+
+Apply the verified 16:9 overrides in the canonical component library for the Magazine only. Compact News, Weiterlesen and property images use `width="128" height="72"` and `style="flex-basis:128px;width:128px;height:72px;"`; topic tile wrappers use `style="height:auto;aspect-ratio:16/9;"`; SuchenPlus image uses `style="aspect-ratio:16/9;"`. These are scoped exceptions alongside the existing lead/intro instructions, not permission for global CSS or unrelated inline styles. Use the large and compact WebP URLs from image-roles.md. Author portraits remain square WebP and round in display; preserve other logos and intrinsic diagram sizes. The placeholder is a lossless grey WebP.

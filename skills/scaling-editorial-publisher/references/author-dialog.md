@@ -9,7 +9,7 @@ Stand: 20.11.2026. **Der Rollout auf alle acht erfassten Magazinartikel ist ausd
 Vor dem ersten CMS-Einbau müssen alle Voraussetzungen nachgewiesen sein:
 
 1. Die zentrale Bridge und Runtime mit dieser Komponente wurden separat zur Auslieferung freigegeben und ihre Verfügbarkeit im tatsächlichen Magazin-Renderer geprüft. Ein privater Entwicklungsstand, eine Skillinstallation oder funktionierende isolierte Vorschau beweist das nicht. Der tatsächliche Renderer muss dialog, hidden, IDs und aria-/data-Attribute erhalten.
-2. Portrait, Name und Rolle stammen aus der zentralen Autorenliste; die Autorin ist für den Artikel bestätigt. Inga Ervig und Julia Walter bleiben die einzigen wählbaren Autorinnen. Julias registrierte Portraitdatei heißt weiterhin author-julia-fraese.png.
+2. Portrait, Name und Rolle stammen aus der zentralen Autorenliste; die Autorin ist für den Artikel bestätigt. Inga Ervig und Julia Walter bleiben die einzigen wählbaren Autorinnen. Für Julia und Inga die registrierten quadratischen WebPs verwenden; der sichtbare Kreis bleibt erhalten.
 3. Eine vom Nutzer bestätigte Kurzvorstellung liegt für genau diese Autorin vor. Fehlt sie, gezielt nach dem Text fragen. Keine Biografie aus Namen, Artikeltexten oder externen Profilen ableiten, keine Recherche starten und keine persönlichen Angaben erfinden. Ein bereits bestätigter gespeicherter Text muss bei Folgeaufträgen nicht neu erfragt werden.
 4. Der konkrete Auftrag bezeichnet das einzelne CMS-Ziel eindeutig. Zunächst nur eine ausdrücklich beauftragte Testseite anpassen, vollständig zurücklesen und auf Desktop und schmalem Display prüfen. Weitere Artikel erst nach gesondertem Rolloutauftrag. Vorher bestehende ID, Site, Slug, Autorinnenzuordnung, Datum, Lesezeit und den gesamten restlichen Inhalt erhalten.
 
@@ -50,7 +50,7 @@ Dominik hat am 20.11.2026 nach Abnahme beider Autorinnen-Tests den Rollout auf a
     "id": "inga-ervig",
     "name": "Inga Ervig",
     "role": "Freie Autorin",
-    "portrait": "https://www.static-immobilienscout24.de/fro/_/_/author-inga-ervig.png",
+    "portrait": "https://www.static-immobilienscout24.de/statpic/scaling-editorial/c2e67242abf8f7858ad7ee881a9abbf7_scaling-editorial-portraet-inga-ervig-v02.webp",
     "bio": "Als Redakteurin für verschiedene Bauherren- und Haustechnikmagazine hat sich Inga Ervig mehr als zehn Jahre lang mit Themen rund um die energetische Modernisierung, Heiztechnologien und nachhaltiges Sanieren beschäftigt. Die studierte Germanistin und Kulturmanagerin hat ein Faible für historische Altbauten. Inga arbeitet als selbstständige Content Marketing Managerin und übersetzt gerne Bau-Fachchinesisch in verständliche und unterhaltsame Artikel.",
     "profile": "https://www.linkedin.com/in/inga-ervig/"
   },
@@ -58,7 +58,7 @@ Dominik hat am 20.11.2026 nach Abnahme beider Autorinnen-Tests den Rollout auf a
     "id": "julia-walter",
     "name": "Julia Walter",
     "role": "Freie Autorin",
-    "portrait": "https://www.static-immobilienscout24.de/fro/_/_/author-julia-fraese.png",
+    "portrait": "https://www.static-immobilienscout24.de/statpic/scaling-editorial/460d851cbbd183a405ec8785a4dfd928_scaling-editorial-portraet-julia-walter-v02.webp",
     "bio": "Julia Walter arbeitet seit 2019 hauptberuflich als Copywriterin. Wohnen, Einrichten und Lifestyle begleiten sie dabei seit vielen Jahren. Als Content Expertin war sie unter anderem für zwei Heimwerker-Plattformen und eine App für 360°-Immobilienbesichtigungen tätig. Ihr Schwerpunkt liegt darauf, komplexe Zusammenhänge verständlich zu erklären und die inneren Fragen aufzugreifen, die Menschen bei wichtigen Entscheidungen rund um Immobilienkauf, -verkauf und Mietsuche beschäftigen. Für ImmoScout24 ordnet sie Entwicklungen auf dem Immobilienmarkt ein. Sie erklärt leicht und verständlich, was höhere Zinsen, neue Bauzahlen oder geplante Reformen für Wohnungssuchende und Eigentümer bedeuten.",
     "profile": "https://www.linkedin.com/in/julia-walter2/"
   }
