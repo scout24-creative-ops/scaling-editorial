@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-24",
+  "snapshot_date": "2026-11-25",
   "skills": {
     "scaling-editorial-article-writer": {
       "requires_skills": [
@@ -243,8 +243,8 @@
           "mode": "100644"
         },
         "references/portal-ux.md": {
-          "sha256": "4bee81f2c79dd6fddceb374f258cf5cdce0c79e22468f2efb1f764edee37aa41",
-          "bytes": 25730,
+          "sha256": "06ac7455edc7e05f53f7f616013efb97f524d1a9dd37e3372fb8bcef132927ad",
+          "bytes": 26379,
           "mode": "100644"
         },
         "references/publisher-contract.md": {
