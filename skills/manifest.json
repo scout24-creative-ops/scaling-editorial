@@ -8,8 +8,8 @@
       ],
       "files": {
         "SKILL.md": {
-          "sha256": "8fc141ba6e6afb08873d2f5026604ad9eb46a382eb4e79663dbac0bf5d75b710",
-          "bytes": 7094,
+          "sha256": "90d74fd45b2aba6bc7a2ace22953100ef7caec2a853a9dbf14f7a7acfefefbb1",
+          "bytes": 6906,
           "mode": "100644"
         },
         "agents/openai.yaml": {
