@@ -68,14 +68,14 @@ The older article-with-sidebar, category-overview, news-nav and standalone artic
 
 ## Recognition and authority
 
-- Treat a complete Article Package supplied by the user as the current input as the draft-intake order. A Writer-generated package in the same conversation is only a handoff until the user requests CMS implementation. Read the full package and first obtain the mandatory personal author choice and three hosted image-role URLs under required-inputs-and-placement.md and image-roles.md; do not add a general creation-confirmation question.
+- Treat a complete Article Package supplied by the user as the current input as the draft-intake order. A Writer-generated package in the same conversation is only a handoff until the user requests CMS implementation. Read the full package and first obtain the mandatory personal author choice and two hosted WebP image-role URLs under required-inputs-and-placement.md and image-roles.md; do not add a general creation-confirmation question.
 - A complete package normally contains `Auftrag`, `Rubrik`, `Themen-Tags`, `Platzierung`, a slug proposal or explicit update target, author information, `Veröffentlichungsdatum`, `Status`, image URL, headline, intro, article, sources, title-image alt text, caption, AI label and optional open checks. New packages may supply `Autor-ID`; legacy packages may still supply `Autor` and `Rolle`. Use the current personal selection of Inga or Julia and the confirmed hosted role URLs under image-roles.md; package values alone do not replace that selection. Ask only genuinely missing other requirements.
 - Default to a new unpublished article Draft. Update only when the package explicitly identifies one existing article unambiguously; a matching slug alone never authorises overwriting a different article. Preserve an existing update target's slug unless a change is explicitly requested.
 - A slug proposal is unverified. Apply the normal duplicate preflight and lifecycle contract from `contentful-integration.md`. Package status never authorises publication.
 
 ## Image-role handoff
 
-Follow [image-roles.md](image-roles.md) for new standard intake: the same motif has separate title, large/medium teaser and small-list files. Accept the Article Package’s `Teaser-Bild-URL` and `Listenteaser-Bild-URL` fields inside its existing image section, but obtain the required current personal confirmation. Older packages remain usable after only the missing role URLs are supplied. Preserve exact author/title/caption/credits and the compact-only visible-label exception; downloads and placeholders are not hosted URLs. Keep the role map on the existing article root and run its scoped preflight/read-back check. This authorizes no asset upload, CDN transformation, CSS change, bulk retrofit or Discover metadata injection.
+Follow [image-roles.md](image-roles.md) for new standard intake: the same motif has a shared 1920 × 1080 title/large/medium WebP and a 480 × 270 compact WebP for small News and Weiterlesen. Accept the Article Package’s `Bild-URL` and `Listenteaser-Bild-URL` fields in the package, but obtain the required current personal confirmation. Older packages remain usable after only the missing role URLs are supplied. Preserve exact author/title/caption/credits and the visible AI mark on both files; downloads and placeholders are not hosted URLs. Keep the role map on the existing article root and run its scoped preflight/read-back check. This authorizes no asset upload, CDN transformation, CSS change, bulk retrofit or Discover metadata injection.
 
 ## Editorial SEO handoff
 
@@ -139,15 +139,15 @@ This is the single deployed author-registry snapshot available to the LP Builder
 
 | Author ID | Public display name | Confirmed role / expertise | Portrait URL | Verified profile URL | Status |
 |---|---|---|---|---|---|
-| `inga-ervig` | Inga Ervig | Freie Autorin | `https://www.static-immobilienscout24.de/fro/_/_/author-inga-ervig.png` | `https://threadmedia.de/about-inga-ervig/` | Real author; confirm assignment per article |
-| `julia-walter` | Julia Walter | Freie Autorin | `https://www.static-immobilienscout24.de/fro/_/_/author-julia-fraese.png` | `https://www.canva.com/design/DAFIcfHGL7s/4sOKkOHP5gmxoZz_jJxzTw/view?utm_content=DAFIcfHGL7s&utm_campaign=designshare&utm_medium=link&utm_source=editor` | Real author; confirm assignment per article |
+| `inga-ervig` | Inga Ervig | Freie Autorin | `https://www.static-immobilienscout24.de/statpic/scaling-editorial/c2e67242abf8f7858ad7ee881a9abbf7_scaling-editorial-portraet-inga-ervig-v02.webp` | `https://threadmedia.de/about-inga-ervig/` | Real author; confirm assignment per article |
+| `julia-walter` | Julia Walter | Freie Autorin | `https://www.static-immobilienscout24.de/statpic/scaling-editorial/460d851cbbd183a405ec8785a4dfd928_scaling-editorial-portraet-julia-walter-v02.webp` | `https://www.canva.com/design/DAFIcfHGL7s/4sOKkOHP5gmxoZz_jJxzTw/view?utm_content=DAFIcfHGL7s&utm_campaign=designshare&utm_medium=link&utm_source=editor` | Real author; confirm assignment per article |
 | `test-autor-1` | Maria Müller | Expertin für Immobilien | `https://www.static-immobilienscout24.de/fro/_/_/sclaing-editorial-author-avatar-1.png` | — | Historischer Testdatensatz – keine Neuzuweisung |
 | `test-autor-2` | Elisabeth König | Expertin für Immobilien | `https://www.static-immobilienscout24.de/fro/_/_/sclaing-editorial-author-avatar-2.png` | — | Historischer Testdatensatz – keine Neuzuweisung |
 
 Real-profile resolution:
 - Resolve `Inga` / `Inga Ervig` to `inga-ervig`, and `Julia` / `Julia Walter` to `julia-walter` only after the user explicitly assigns that author for the specific article. Use exactly the reviewed public name, fixed role, portrait and profile URL above; do not derive authorship from category, style profile, account or an earlier article.
 - Use the existing canonical author component with `data-lpb-author-status="assigned"` for that confirmed real assignment. This is a draft assignment, not a claim of editorial/publication approval. Profile links use only the exact reviewed supplied URL.
-- The portrait filename `author-julia-fraese.png` is the exact registered asset for public author Julia Walter. Preserve it; do not rename the public author or reconstruct an asset URL from the public name. The register's provisional style-profile discussion does not change these stable master records.
+- The portrait filename `author-julia-fraese.png` is the historical filename for public author Julia Walter; use her verified WebP from the current register. Do not rename the public author or reconstruct an asset URL from the public name. The register's provisional style-profile discussion does not change these stable master records.
 - Preserve newer unrelated existing author content during partial updates. These rows are for confirmed new assignments, not authority to migrate old article identities or rewrite a source register.
 
 Separation:

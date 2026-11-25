@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only checks for the selected article's title, teaser and small-list URLs."""
+"""Read-only checks for the selected article's two hosted WebP roles."""
 import argparse
 from html.parser import HTMLParser
 import json
@@ -8,13 +8,13 @@ from urllib.parse import urlsplit
 
 ROLE_ATTRIBUTES = {
     'title': 'data-lpb-image-title-url',
-    'teaser': 'data-lpb-image-teaser-url',
     'list': 'data-lpb-image-list-url',
 }
 OVERVIEW_CLASSES = {
-    'lpb-editorial-ux-card__image': 'teaser',
-    'lpb-editorial-ux-category-lead__image': 'teaser',
+    'lpb-editorial-ux-card__image': 'title',
+    'lpb-editorial-ux-category-lead__image': 'title',
     'lpb-editorial-ux-compact__image': 'list',
+    'lpb-editorial-ux-reading__image': 'list',
 }
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link',
         'meta', 'param', 'source', 'track', 'wbr'}
@@ -26,7 +26,8 @@ def hosted_url(value):
     try:
         p = urlsplit(value)
         return (p.scheme == 'https' and bool(p.hostname) and not p.username
-                and not p.password and not p.fragment
+                and not p.password and not p.fragment and p.path.lower().endswith('.webp')
+                and 'platzhalter' not in p.path.lower() and 'placeholder' not in p.path.lower()
                 and p.hostname not in ('chatgpt.com', 'www.chatgpt.com')
                 and not any(c in value for c in '<>"[]'))
     except ValueError:
@@ -52,7 +53,7 @@ class Images(HTMLParser):
                 role = 'title'
             if role:
                 href = next((p.get('href') for t, p in reversed(self.stack) if t == 'a'), None)
-                self.images.append({'role': role, 'attrs': d, 'href': href,
+                self.images.append({'role': role, 'is_hero': 'lpb-editorial-article__media' in parent_classes, 'attrs': d, 'href': href,
                                     'picture': any(t == 'picture' for t, _ in self.stack)})
         if tag not in VOID:
             self.stack.append((tag, d))
@@ -69,10 +70,10 @@ class Images(HTMLParser):
                 return
 
 
-def check(html, *, mode, title_url, teaser_url=None, list_url=None,
+def check(html, *, mode, title_url, list_url=None,
           article_href=None, article_only=False, expected_html=None):
     errors = []
-    urls = {'title': title_url, 'teaser': teaser_url, 'list': list_url}
+    urls = {'title': title_url, 'list': list_url}
     required = ['title'] if article_only and mode == 'article' else list(urls)
     if article_only and mode != 'article':
         errors.append('article_only is valid only for an expressly limited article-page check')
@@ -89,16 +90,18 @@ def check(html, *, mode, title_url, teaser_url=None, list_url=None,
     parser = Images()
     parser.feed(html)
     if mode == 'article':
-        selected = [x for x in parser.images if x['role'] == 'title']
+        selected = [x for x in parser.images if x['is_hero']]
         if len(parser.maps) != 1:
             errors.append('article requires one canonical article root with saved image-role attributes')
         else:
+            if 'data-lpb-image-teaser-url' in parser.maps[0]:
+                errors.append('legacy third image-role attribute is not allowed for the new schema')
             for role in required:
                 if parser.maps[0].get(ROLE_ATTRIBUTES[role]) != urls[role]:
                     errors.append(f'{role}: saved role attribute is missing or changed')
     else:
         selected = [x for x in parser.images
-                    if x['role'] != 'title' and x['href'] == article_href]
+                    if not x['is_hero'] and x['href'] == article_href]
     if len(selected) != 1:
         errors.append('expected exactly one managed image for the selected article on this page')
     signatures = []
@@ -110,8 +113,8 @@ def check(html, *, mode, title_url, teaser_url=None, list_url=None,
             errors.append('unverified responsive image sources may override the selected role URL')
         try:
             width, height = int(d.get('width', '')), int(d.get('height', ''))
-            valid_dimensions = ((width, height) == (120, 80) if role == 'list'
-                                else width > 0 and height > 0 and width * 9 == height * 16)
+            valid_dimensions = ((width, height) == (128, 72) if role == 'list'
+                                else (width, height) == (1920, 1080))
         except ValueError:
             valid_dimensions = False
         if not valid_dimensions:
@@ -119,7 +122,7 @@ def check(html, *, mode, title_url, teaser_url=None, list_url=None,
         signatures.append((role, *(d.get(k) for k in ('src', 'alt', 'width', 'height', 'loading'))))
     if expected_html is not None:
         expected = check(expected_html, mode=mode, title_url=title_url,
-                         teaser_url=teaser_url, list_url=list_url,
+                         list_url=list_url,
                          article_href=article_href, article_only=article_only)
         if not expected['ok']:
             errors.append('expected HTML did not pass its own preflight')
@@ -134,7 +137,6 @@ if __name__ == '__main__':
     p.add_argument('--html', type=Path, required=True)
     p.add_argument('--mode', choices=('article', 'overview'), required=True)
     p.add_argument('--title-url', required=True)
-    p.add_argument('--teaser-url')
     p.add_argument('--list-url')
     p.add_argument('--article-href')
     p.add_argument('--article-only', action='store_true')
