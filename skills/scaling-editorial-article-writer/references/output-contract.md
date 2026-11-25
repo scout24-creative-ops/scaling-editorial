@@ -72,6 +72,8 @@ Gib den finalen gemeinsamen Introtext für Artikel und großen Teaser aus.
 
 Gib den vollständigen journalistischen Artikel aus. Formatiere Zwischenüberschriften als Überschriften dritter Ebene. Wiederhole Headline und Introtext nicht unnötig im Artikelkörper. Kürze den Artikel nicht wegen dieses Ausgabeformats.
 
+Für eine geeignete Vergleichstabelle im `## Artikel` nutze GFM-Pipe-Markdown als eigenen Block, mit Leerzeile davor und danach: eine separate Zeile `**Tabellentitel:** …`, eine Leerzeile, dann eine Kopfzeile mit kurzen eindeutigen Namen, eine Trennzeile (`---`, für Zahlen rechtsbündig `---:`) und wenige Datenzeilen mit derselben Spaltenzahl. Nutze einfache Textzellen; keine Verschachtelung, zusammengeführten Zellen, Umbrüche oder HTML. Schreibe Einheiten in Kopf oder Zellen; Quellen, Zeitraum und notwendige Einschränkungen bleiben im umgebenden Text und Quellenblock nachvollziehbar. Tabellentitel, Spaltenköpfe und Zellwerte zählen zur Wortgrenze. Fehlt eine belastbare Grundlage oder ist die Tabelle auf Mobil unnötig breit, verwende Absätze oder eine Liste.
+
 Bewahre die Markdown-Hierarchie des Article Package. Die Paketüberschrift `# Article Package` ist keine zusätzliche öffentliche Artikelüberschrift. Die technische Umsetzung einer einzigen sichtbaren Artikel-H1 sowie der H2/H3-Struktur übernimmt der Publisher.
 
 ## Quellen
@@ -145,7 +147,7 @@ Prüfe jeden Entwurf selbstständig:
 
 17. Benennen vorhandene Zwischenüberschriften eine konkrete Erkenntnis oder relevante Leserfrage des folgenden Abschnitts, soweit dies dessen Orientierung verbessert? Sind Zahlen, Gegensätze und Versprechen vollständig durch diesen Abschnitt gedeckt und sachliche Überschriften dort erhalten, wo sie am besten helfen? Prüfe nach „Zwischenüberschriften“ in editorial-policy.md; keine Zuspitzung oder zusätzliche Gliederung erzwingen.
 
-18. Verbessern eingesetzte Listen und sparsame Fettungen tatsächlich die Lesbarkeit? Sind gleichrangige Punkte bzw. echte Schrittfolgen erkennbar, alle Zusammenhänge und Einschränkungen erhalten und weder Formatierungsquote noch neue Tabellen eingeführt? Fließtext bleibt eine gültige Wahl.
+18. Verbessern Listen, sparsame Fettungen oder eine kurze Vergleichstabelle tatsächlich die Lesbarkeit? Sind Werte, Einheiten, Kopfzeilen und notwendige Einschränkungen vollständig aus dem Story Package belegt und im Übergabeformat erhalten? Es gibt keine Formatierungsquote; Fließtext bleibt eine gültige Wahl.
 
 Verbessere den Entwurf eigenständig, wenn du bei einem Punkt Schwächen erkennst. Falls der Verständlichkeitscheck scheitert, verbessere den erforderlichen Kontext, die Begriffserklärungen oder den Aufbau. Fehlt dafür notwendiger, verlässlicher Hintergrund im Writer-Briefing, benenne stattdessen die konkrete Lücke.
 

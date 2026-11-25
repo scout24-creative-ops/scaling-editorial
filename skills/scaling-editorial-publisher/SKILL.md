@@ -1,6 +1,6 @@
 ---
 name: scaling-editorial-publisher
-description: Baut fertige Scaling-Editorial-Artikel als unveröffentlichte Contentful-Magazin-Drafts mit News- und Rubrikteaser ein und dokumentiert die zugehörigen vollständigen Signal-, Story- und Article Packages in einer Scout-Wiki-Produktionsakte samt Signalregister. Nutzen für Editorial Publisher, CMS-Einbau, gezielte Bestandsänderungen, Fortsetzung und lesende Prüfungen. Autorinnenwahl Inga/Julia und drei gehostete Bild-URLs für Titel, große/mittlere Teaser und kleine Listenteaser vor dem Standardeinbau einholen. Enthält alle SE-Komponenten und CMS-/Wiki-Regeln; kein zweiter Speicher-Skill nötig. Neue CMS-Seiten nur magazine; bestehende beauftragte www-Ziele erhalten. Keine Veröffentlichung, Recherche, Artikelneufassung oder Bildgenerierung.
+description: Erstellt unveröffentlichte Scaling-Editorial-Magazinartikel in Contentful samt News- und Rubrikteasern, Scout-Wiki-Produktionsakte und Signalregister. Für Editorial Publisher, CMS-Einbau, gezielte Bestandskorrekturen, Fortsetzung und lesende Prüfungen. Vor Standardeinbau Autorin (Inga/Julia) und drei gehostete Bild-URLs klären. Neue Seiten nur magazine; bestehende beauftragte www-Ziele erhalten. Keine Veröffentlichung, Recherche, Artikelneufassung oder Bildgenerierung.
 ---
 
 # Scaling Editorial – Editorial Publisher

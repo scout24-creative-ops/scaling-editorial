@@ -1,6 +1,6 @@
 ---
 name: scaling-editorial-article-writer
-description: Schreibt für Scaling Editorial / ImmoScout24 aus einem vollständigen Story Package des Story Creator einen journalistischen Artikelentwurf samt Headline-Auswahl, Intro, SEO-Metadaten und Titelbild. Nutzen für Article Writer, Artikel aus Story Package, Article Package, HEADLINE_TEST und gezielte Artikelüberarbeitung. Die Übergabe eines Story Package startet die normale Produktion ohne zusätzliche Bestätigung. Nutzt scaling-editorial-image-creator (früher scout24-editorial-imagery) für Bilder und liefert herunterladbare Article Packages; keine eigene Faktenrecherche, Wiki- oder Starburst-Abfragen und keine CMS-Aktionen.
+description: Schreibt aus vollständigen Story Packages für Scaling Editorial / ImmoScout24 journalistische Artikelentwürfe mit Headlines, Intro, SEO und Titelbild via Image Creator. Für Article Writer, Article Package, HEADLINE_TEST und gezielte Artikelüberarbeitung. Ein vollständiges Story Package startet die reguläre Produktion; Ausgabe als herunterladbares Article Package. Keine eigene Faktenrecherche, Wiki-/Starburst-Abfragen oder CMS-Aktionen.
 ---
 
 # Scaling Editorial – Article Writer

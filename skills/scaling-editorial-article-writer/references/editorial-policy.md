@@ -295,7 +295,7 @@ Setze Formatierung gezielt für die Lesbarkeit ein:
 
 - Nutze freiwillig kurze Aufzählungen für mehrere gleichrangige Punkte oder nummerierte Listen für tatsächliche Schrittfolgen, wenn diese dadurch leichter erfassbar werden. Erhalte notwendige Zusammenhänge und Einschränkungen; wandle zusammenhängende Argumentation nicht mechanisch in Listen um.
 - Hebe einzelne zentrale Aussagen oder kurze Schlüsselbegriffe sparsam mit Markdown-Fettung hervor. Vermeide flächige Fettungen und wahre die Gewichtung der belegten Aussagen.
-- Es gibt keine Formatierungsquote und keine Pflicht zu Listen oder Fettungen. Ein kurzer Nachrichtenartikel darf vollständig aus Fließtext bestehen. Nutze normales Markdown innerhalb des bestehenden Artikelabschnitts; Package-Hierarchie, Faktenbasis und Wortgrenze bleiben erhalten. Erweitere die Formatierung nicht eigenständig um Tabellen.
+- Es gibt keine Formatierungsquote und keine Pflicht zu Listen oder Fettungen. Ein kurzer Nachrichtenartikel darf vollständig aus Fließtext bestehen. Nutze normales Markdown innerhalb des bestehenden Artikelabschnitts; Package-Hierarchie, Faktenbasis und Wortgrenze bleiben erhalten. Kurze Vergleichstabellen sind optional, wenn zwei Dimensionen im Fließtext schwerer zu vergleichen sind und alle Zellen direkt im Story Package belegt sind. Bevorzuge zwei Spalten, drei nur wenn nötig, und wenige kurze Zeilen. Schreibe Einheiten und Vergleichsgrundlage eindeutig; halte Bezugszeitraum, Quelle und nötige Aussagegrenzen direkt bei der Tabelle. Keine erfundenen, abgeleiteten oder stillschweigend vergleichbar gemachten Werte. Nutze die Tabellenübergabe im Ausgabevertrag.
 
 ## Redaktionelles Titelbild im normalen Artikelmodus
 

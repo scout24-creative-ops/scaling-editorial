@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-24",
+  "snapshot_date": "2026-11-25",
   "skills": {
     "scaling-editorial-article-writer": {
       "requires_skills": [
@@ -8,8 +8,8 @@
       ],
       "files": {
         "SKILL.md": {
-          "sha256": "8fc141ba6e6afb08873d2f5026604ad9eb46a382eb4e79663dbac0bf5d75b710",
-          "bytes": 7094,
+          "sha256": "90d74fd45b2aba6bc7a2ace22953100ef7caec2a853a9dbf14f7a7acfefefbb1",
+          "bytes": 6906,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -23,8 +23,8 @@
           "mode": "100644"
         },
         "references/editorial-policy.md": {
-          "sha256": "940bac73dd3f38e02784849b74909611bd9808b43a5711de4e5a78ee04a3b52e",
-          "bytes": 30129,
+          "sha256": "9eaab43d07231d95cca7c207bdd07baa203a19fda1c75a26009df36a8aa09851",
+          "bytes": 30561,
           "mode": "100644"
         },
         "references/file-delivery.md": {
@@ -38,8 +38,8 @@
           "mode": "100644"
         },
         "references/output-contract.md": {
-          "sha256": "9225eea1db525efc95e41ad5d7e3ce4d7fc353a2305a689e9086b27a2c13a517",
-          "bytes": 14948,
+          "sha256": "40c4ae13001f8a0ebb8542da3d143a0e1e69527a2a6e0b4d1c76c764095b917e",
+          "bytes": 15749,
           "mode": "100644"
         },
         "scripts/write_package.py": {
@@ -183,8 +183,8 @@
       "requires_skills": [],
       "files": {
         "SKILL.md": {
-          "sha256": "5c831f5e33e4e8d7fb80fca25a6d51b32158e52d3c684855713a8723a482e099",
-          "bytes": 22281,
+          "sha256": "a623621a455f2f2f1e71970a8dabacc7426201549d55d274df59798502bab4a5",
+          "bytes": 22004,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -243,8 +243,8 @@
           "mode": "100644"
         },
         "references/portal-ux.md": {
-          "sha256": "4bee81f2c79dd6fddceb374f258cf5cdce0c79e22468f2efb1f764edee37aa41",
-          "bytes": 25730,
+          "sha256": "e63741d878e5f9dc8989e67947360bed7e76a2b7754f79f6b178923f7f20dd79",
+          "bytes": 28642,
           "mode": "100644"
         },
         "references/publisher-contract.md": {
