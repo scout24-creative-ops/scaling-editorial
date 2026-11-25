@@ -121,6 +121,8 @@ Retained library component, excluded from the current regular article compositio
 
 ## scaling-editorial-ux-reading-list
 
+Verlinkte Weiterlesen-Teaser verwenden exakt `<li><a class="lpb-editorial-ux-card__link" href="…"><img …><div>…</div></a></li>`: Bild und Textgruppe sind direkte Kinder desselben Links. Die vorhandene Klasse hält Bild und Text nebeneinander; ein nackter Link würde sie stapeln. Prüfe bei Rücklesen alle Teaser-Links auf diese Klasse und bei sichtbarer Vorschau mindestens Desktop und Mobil. Unverlinkte Platzhalter behalten Bild und Text direkt im `<li>`; keine Links erfinden und keine Stilregeln, Bilder, Texte oder Ziele zur Reparatur ersetzen.
+
 Embedded compact Weiterlesen variant, independent from the retained vertical-card `scaling-editorial-more-articles` default. Each item uses an 80×56 px image left, plain topic text and 12/16 px headline right. No intro or invented author/date. When using actual recommendations, exclude the current article and require verified destinations for one whole-item link; supplied UX dummy items remain unlinked. On mobile place the rail after the article, never between its paragraphs.
 
 ## scaling-editorial-ux-breadcrumb
