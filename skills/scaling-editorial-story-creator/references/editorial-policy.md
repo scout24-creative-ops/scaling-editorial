@@ -83,7 +83,7 @@ Diese Präzisierung gilt für alle späteren Anforderungen an Eigenständigkeit 
 
 Recherchiere die tragenden Aussagen und den für das gewählte Format erforderlichen Kontext. Zusätzliche rechtliche, gesellschaftliche oder methodische Erklärstücke sind nur sinnvoll, wenn sie die konkrete Leserfrage verbessern.
 
-Plane auch Lifestyle-Artikel standardmäßig mit unter 500 Wörtern einschließlich Intro. Es gibt keine Mindestlänge; richte die Struktur an der belegten Nachricht aus und erzwinge weder Länge noch zusätzliche Teilthemen. Nur ein ausdrücklicher Nutzerwunsch erlaubt einen längeren Artikel. Übernimm eine solche Nutzervorgabe mit Zielumfang, soweit genannt, unter „Empfohlene Artikelstruktur“ ins Story Package; Thema, Komplexität oder ein altes Package mit 500–650 Wörtern begründen allein keine Ausnahme.
+Richte die Struktur von Lifestyle-Artikeln an der belegten Nachricht und ihrem Erklärbedarf aus. Eine kurze Meldung braucht weder Mindestlänge noch zusätzliche Teilthemen.
 
 Kläre vor der Wahl des Story Angles:
 
@@ -103,7 +103,7 @@ Reichen die verfügbaren Belege für eine eigenständige, relevante und tragfäh
 
 Gibt es genügend Substanz für ein attraktives, verständliches und ehrliches Headline-Potenzial, dessen belegbarer Konflikt, Überraschungsmoment oder Nutzwert durch die Geschichte erfüllt wird?
 
-Ein gut belegtes, aktuelles oder statistisch interessantes Signal ist nicht automatisch eine gute Geschichte. Wähle den stärksten journalistischen Angle und konzentriere die Story auf eine klar erkennbare zentrale Leserfrage und Erkenntnis. Unterscheide zwischen dem vollständigen Recherchematerial und dem Stoff, den der Artikel tatsächlich benötigt. Entscheide bei mehreren Teilthemen eigenständig, ob ein fokussierter Einzelaspekt oder ein kompakter Überblick den größeren Lesermehrwert bietet. Ein Überblick bleibt erlaubt, wenn seine Breite journalistisch begründet ist und Leserinnen und Leser ihn ohne Überforderung nutzen können. Plane standardmäßig unter 500 Wörter einschließlich Intro; Überschriften, Quellen und Bildunterschriften zählen nicht mit. Kürzere Artikel bleiben erlaubt. Nur eine ausdrückliche längere Nutzervorgabe hebt diese Standardgrenze auf; gib sie im Story Package weiter.
+Ein gut belegtes, aktuelles oder statistisch interessantes Signal ist nicht automatisch eine gute Geschichte. Wähle den stärksten journalistischen Angle und konzentriere die Story auf eine klar erkennbare zentrale Leserfrage und Erkenntnis. Unterscheide zwischen dem vollständigen Recherchematerial und dem Stoff, den der Artikel tatsächlich benötigt. Entscheide bei mehreren Teilthemen eigenständig, ob ein fokussierter Einzelaspekt oder ein kompakter Überblick den größeren Lesermehrwert bietet. Ein Überblick bleibt erlaubt, wenn seine Breite journalistisch begründet ist und Leserinnen und Leser ihn ohne Überforderung nutzen können. Plane so kurz wie möglich und so ausführlich wie nötig. Gib bei Zahlen und Vergleichen die zum Verständnis nötigen Bezugsgrößen, Zeiträume und Unterschiede mit. Dafür sind 500–650 Wörter einschließlich Intro ein Richtwert, kein Ziel oder Limit. Kennzeichne ausdrückliche Längenvorgaben in der empfohlenen Artikelstruktur als Nutzerwunsch.
 
 ## Verantwortung für Headlines
 

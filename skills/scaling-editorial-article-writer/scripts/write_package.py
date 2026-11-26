@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write a structural and length-checked editorial handoff; never verify facts."""
+"""Write a structure-checked editorial handoff and report its word count."""
 import argparse
 from datetime import datetime
 import hashlib
@@ -95,7 +95,7 @@ def public_url(value):
         raise PackageError('Internal Wiki working references are not public article sources')
     return value
 
-def render(data, allow_long_article=False):
+def render(data):
     fields(data,('kind','topic','metadata','sections','source_urls'))
     kind=data['kind']
     if not isinstance(kind,str) or kind not in CONTRACTS:
@@ -149,11 +149,6 @@ def render(data, allow_long_article=False):
         alternatives=[line for line in content['Headline-Alternativen'].splitlines() if re.match(r'^\s*[-*+]\s+\S',line)]
         if len(alternatives)!=2:
             raise PackageError('Exactly two review-only headline alternatives are required')
-        count = article_word_count(sections)
-        if allow_long_article and 'Längenvorgabe' not in labels:
-            raise PackageError('A long-article exception requires the actual user instruction in Längenvorgabe')
-        if count >= 500 and not allow_long_article:
-            raise PackageError(f'Intro and article contain {count} words; default requires fewer than 500. Shorten and recount. Use --allow-long-article only for an explicit user exception.')
     parts=['# '+spec['title']]
     if metadata_lines:
         parts.append('\n'.join(metadata_lines))
@@ -173,12 +168,12 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--input',type=Path,required=True)
     parser.add_argument('--output-dir',type=Path,required=True)
-    parser.add_argument('--allow-long-article',action='store_true',
-                        help='Only for an explicit user length/preservation instruction, documented in Längenvorgabe')
+    # Keep the legacy flag accepted for in-flight calls; it no longer changes export.
+    parser.add_argument('--allow-long-article', action='store_true', help=argparse.SUPPRESS)
     args=parser.parse_args()
     try:
         data=json.loads(args.input.read_text(encoding='utf-8'),object_pairs_hook=no_duplicate_keys)
-        kind,topic,markdown=render(data,args.allow_long_article)
+        kind,topic,markdown=render(data)
         slug=unicodedata.normalize('NFKD',topic).encode('ascii','ignore').decode().lower()
         slug=re.sub(r'[^a-z0-9]+','-',slug).strip('-')[:65].rstrip('-') or 'thema'
         stamp=datetime.now(ZoneInfo('Europe/Berlin')).strftime('%Y%m%d')
@@ -190,8 +185,7 @@ def main():
         if target.read_bytes()!=raw:
             raise PackageError('Readback differs from package')
         print(json.dumps({'path':str(target.resolve()),'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest(),
-                          'articleWords':article_word_count(data['sections']),
-                          'longArticleException':args.allow_long_article},ensure_ascii=False))
+                          'articleWords':article_word_count(data['sections'])},ensure_ascii=False))
         return 0
     except (OSError,ValueError) as error:
         print(f'Package not delivered: {error}',file=sys.stderr)
