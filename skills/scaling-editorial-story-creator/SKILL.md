@@ -1,6 +1,6 @@
 ---
 name: scaling-editorial-story-creator
-description: Entwickelt Web-Signale und Signal Packages des Trend Finder für Scaling Editorial / ImmoScout24 zu eigenständigen, evidenzgedeckten Storys. Nutzen für Story Creator, Storyentwicklung, Signalprüfung und Story Packages. Prüft journalistischen Angle, Leserfrage, Format, Quellen und optionales Scout24-Datenpotenzial mit Scout Wiki und ausschließlich lesenden Starburst-SELECT-Analysen. Liefert positive Ergebnisse als vollständige herunterladbare Story Packages, Recherchebegründung separat; andernfalls begründete Verwerfung. Schreibt keine Artikel oder fertigen Headlines.
+description: Entwickelt Web-Signale und Signal Packages für Scaling Editorial / ImmoScout24 zu evidenzgedeckten Story Packages. Für Story Creator, Storyentwicklung und Signalprüfung. Prüft Angle, Leserfrage, Format, Quellen und optionales Scout24-Datenpotenzial mit Scout Wiki und lesenden Starburst-SELECT-Abfragen. Liefert Story Package und separate Recherchebegründung oder eine begründete Verwerfung. Schreibt keine Artikel oder fertigen Headlines.
 ---
 
 # Scaling Editorial – Story Creator
