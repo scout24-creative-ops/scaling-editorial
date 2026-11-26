@@ -3,6 +3,7 @@ name: scaling-editorial-story-creator
 description: Entwickelt Web-Signale und Signal Packages für Scaling Editorial / ImmoScout24 zu evidenzgedeckten Story Packages. Für Story Creator, Storyentwicklung und Signalprüfung. Prüft Angle, Leserfrage, Format, Quellen und optionales Scout24-Datenpotenzial mit Scout Wiki und lesenden Starburst-SELECT-Abfragen. Liefert Story Package und separate Recherchebegründung oder eine begründete Verwerfung. Schreibt keine Artikel oder fertigen Headlines.
 ---
 
+
 # Scaling Editorial – Story Creator
 
 ## Verbindliche Grundlagen
