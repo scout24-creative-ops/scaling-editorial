@@ -35,20 +35,18 @@ def sources(*anchors):
 
 
 class ArticleLength(unittest.TestCase):
-    def test_499_accepted_and_500_rejected(self):
-        self.assertEqual(writer.article_word_count(package(499)['sections']), 499)
-        writer.render(package(499))
-        with self.assertRaises(writer.PackageError):
-            writer.render(package(500))
+    def test_word_count_has_no_cutoff(self):
+        for words in (499, 500, 820):
+            with self.subTest(words=words):
+                data = package(words)
+                self.assertEqual(writer.article_word_count(data['sections']), words)
+                writer.render(data)
 
-    def test_explicit_long_exception_and_documentation(self):
+    def test_explicit_length_is_optional_metadata(self):
         data = package(820)
-        with self.assertRaises(writer.PackageError):
-            writer.render(data, allow_long_article=True)
+        self.assertNotIn('Längenvorgabe', writer.render(data)[2])
         data['metadata'].append({'label': 'Längenvorgabe', 'value': 'Nutzer: Bitte etwa 820 Wörter.'})
-        with self.assertRaises(writer.PackageError):
-            writer.render(data)
-        self.assertIn('Längenvorgabe', writer.render(data, allow_long_article=True)[2])
+        self.assertIn('Längenvorgabe', writer.render(data)[2])
 
     def test_no_minimum_length(self):
         writer.render(package(2))
@@ -58,7 +56,7 @@ class ArticleLength(unittest.TestCase):
         for section in data['sections']:
             if section['heading'] in ('Quellen', 'Titelbild', 'SEO'):
                 section['body'] = ' '.join(['Zusatz'] * 200)
-        writer.render(data)
+        self.assertEqual(writer.article_word_count(data['sections']), 499)
 
     def test_headings_urls_and_captions_excluded(self):
         text = ('### Sehr lange Überschrift\n'

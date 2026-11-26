@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-11-25",
+  "snapshot_date": "2026-11-26",
   "skills": {
     "scaling-editorial-article-writer": {
       "requires_skills": [
@@ -8,8 +8,8 @@
       ],
       "files": {
         "SKILL.md": {
-          "sha256": "1e55ef2e1bd24b0bdd899516aeba3b2858d286ebd5776505f72d13ca9c35e667",
-          "bytes": 6905,
+          "sha256": "97a3669d0c5eaf27655e7436e605f87d88cee1d557b448baf21ec758d3b67f11",
+          "bytes": 6974,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -23,13 +23,13 @@
           "mode": "100644"
         },
         "references/editorial-policy.md": {
-          "sha256": "9eaab43d07231d95cca7c207bdd07baa203a19fda1c75a26009df36a8aa09851",
-          "bytes": 30561,
+          "sha256": "a38cda498685c4a9bce64408948f11b19ae0d2d8e011610013b3dae957df0ef8",
+          "bytes": 30096,
           "mode": "100644"
         },
         "references/file-delivery.md": {
-          "sha256": "6113844fade16bc0149611f8375bc7d208d83973262c1ed993c31b4848816e85",
-          "bytes": 5978,
+          "sha256": "347f053c26b0cdf1308e5570e8a5e83c433e2c8927a058b88e39adab245be360",
+          "bytes": 5731,
           "mode": "100644"
         },
         "references/imagery-dependency.md": {
@@ -38,13 +38,13 @@
           "mode": "100644"
         },
         "references/output-contract.md": {
-          "sha256": "660a5dd391a268d054cbf19c5578aeb31c194a9039d35b9c4d9120bb924c1f34",
-          "bytes": 15282,
+          "sha256": "beb5fc4d0a84b5d5103bbb6d05e502eaba315f4c1d01b87e6bad6d94d924b3b7",
+          "bytes": 15077,
           "mode": "100644"
         },
         "scripts/write_package.py": {
-          "sha256": "c009120e1f9a1f2286ec8b24033a28d47fd3b4befd61735b1aa3a159f1cc236b",
-          "bytes": 9548,
+          "sha256": "42b377857e33565de69f9b11e9201771c61ced4f75b85dbec6829fca6100c48a",
+          "bytes": 8940,
           "mode": "100644"
         }
       }
@@ -293,8 +293,8 @@
       "requires_skills": [],
       "files": {
         "SKILL.md": {
-          "sha256": "dc9eb2ce6ef3dc80877db8249848de8fb3a0b2cb13429e9d6d5aa4ce1359cb04",
-          "bytes": 6215,
+          "sha256": "b79b8c567c641b3561048716f594f28bda466dd441759e58b6fe7b699bd64964",
+          "bytes": 6086,
           "mode": "100644"
         },
         "agents/openai.yaml": {
@@ -308,8 +308,8 @@
           "mode": "100644"
         },
         "references/editorial-policy.md": {
-          "sha256": "c7056a0785e7167c4853ee2f78c7ab558b0a693954abe0d1e67b37e00608da7c",
-          "bytes": 21124,
+          "sha256": "b5fef2d20c91188a975346c26e56da8e4d43519300a5c3ace6fc7a28ff2087d7",
+          "bytes": 20857,
           "mode": "100644"
         },
         "references/file-delivery.md": {
@@ -323,8 +323,8 @@
           "mode": "100644"
         },
         "references/output-contract.md": {
-          "sha256": "0629b3730dcceeeeae07224c5ed0f2116c67d714ee0e48d49affa45aba1015c4",
-          "bytes": 9580,
+          "sha256": "6426653ec6b45e7dbfe769971514062c680505b30be652522de08f71e283ce15",
+          "bytes": 9354,
           "mode": "100644"
         },
         "scripts/write_package.py": {

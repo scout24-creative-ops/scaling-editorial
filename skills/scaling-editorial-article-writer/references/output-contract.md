@@ -33,7 +33,7 @@ Direkt unter `# Article Package` steht dieser kompakte Bullet-Block; ersetze die
 - **Status:** Entwurf – Human Review erforderlich
 - **Bild-URL:** [BILD-URL HIER EINFÜGEN]
 
-Bei einer ausdrücklich längeren Nutzervorgabe ergänze nach den Pflichtmetadaten den optionalen Bullet **Längenvorgabe:** mit der tatsächlich beauftragten Ausnahme und gegebenenfalls dem Zielumfang. Behaupte keine Nutzervorgabe aus einer eigenen Empfehlung.
+Bei einer ausdrücklichen Längenvorgabe ergänze nach den Pflichtmetadaten den optionalen Bullet **Längenvorgabe:** mit dem tatsächlich beauftragten Umfang. Behaupte keine Nutzervorgabe aus einer eigenen Empfehlung.
 
 Falls ausdrücklich die Aktualisierung einer bestehenden Seite beauftragt wurde:
 
@@ -72,7 +72,7 @@ Gib den finalen gemeinsamen Introtext für Artikel und großen Teaser aus.
 
 Gib den vollständigen journalistischen Artikel aus. Formatiere Zwischenüberschriften als Überschriften dritter Ebene. Wiederhole Headline und Introtext nicht unnötig im Artikelkörper. Kürze den Artikel nicht wegen dieses Ausgabeformats.
 
-Für eine geeignete Vergleichstabelle im `## Artikel` nutze GFM-Pipe-Markdown als eigenen Block, mit Leerzeile davor und danach: eine separate Zeile `**Tabellentitel:** …`, eine Leerzeile, dann eine Kopfzeile mit kurzen eindeutigen Namen, eine Trennzeile (`---`, für Zahlen rechtsbündig `---:`) und wenige Datenzeilen mit derselben Spaltenzahl. Nutze einfache Textzellen; keine Verschachtelung, zusammengeführten Zellen, Umbrüche oder HTML. Schreibe Einheiten in Kopf oder Zellen; Quellen, Zeitraum und notwendige Einschränkungen bleiben im umgebenden Text und Quellenblock nachvollziehbar. Tabellentitel, Spaltenköpfe und Zellwerte zählen zur Wortgrenze. Fehlt eine belastbare Grundlage oder ist die Tabelle auf Mobil unnötig breit, verwende Absätze oder eine Liste.
+Für eine geeignete Vergleichstabelle im `## Artikel` nutze GFM-Pipe-Markdown als eigenen Block, mit Leerzeile davor und danach: eine separate Zeile `**Tabellentitel:** …`, eine Leerzeile, dann eine Kopfzeile mit kurzen eindeutigen Namen, eine Trennzeile (`---`, für Zahlen rechtsbündig `---:`) und wenige Datenzeilen mit derselben Spaltenzahl. Nutze einfache Textzellen; keine Verschachtelung, zusammengeführten Zellen, Umbrüche oder HTML. Schreibe Einheiten in Kopf oder Zellen; Quellen, Zeitraum und notwendige Einschränkungen bleiben im umgebenden Text und Quellenblock nachvollziehbar. Tabellentitel, Spaltenköpfe und Zellwerte zählen zur gemeldeten Wortzahl. Fehlt eine belastbare Grundlage oder ist die Tabelle auf Mobil unnötig breit, verwende Absätze oder eine Liste.
 
 Bewahre die Markdown-Hierarchie des Article Package. Die Paketüberschrift `# Article Package` ist keine zusätzliche öffentliche Artikelüberschrift. Die technische Umsetzung einer einzigen sichtbaren Artikel-H1 sowie der H2/H3-Struktur übernimmt der Publisher.
 
@@ -117,7 +117,7 @@ Für Bildmetadaten, Motivauswahl, technischen Bildexport und den separaten Bildd
 
 Wenn der Nutzer ausdrücklich nur Prüfung, Feedback, `HEADLINE_TEST` oder eine reine Überarbeitung verlangt, führe ausschließlich diese Aufgabe aus. Die SEO-Ergänzungen gelten für den normalen Artikelmodus. `HEADLINE_TEST` sowie ausdrücklich begrenzte Prüf-, Feedback- und Überarbeitungsaufträge behalten ihren bisherigen Umfang. Die bloße Übergabe eines Story Package ist dagegen der normale Artikelmodus und startet die vollständige Produktion.
 
-Erzeuge keine HTML-Metatags, Canonicals, JSON-LD oder sonstigen technischen SEO-Code. Diese Umsetzung gehört zum Publisher beziehungsweise Frontend. Behaupte nicht, dass gelieferte Metadaten bereits im CMS gespeichert oder im Portal wirksam sind. Halte die freigegebene Standardgrenze unter 500 Wörtern einschließlich Intro und ihre ausdrückliche Nutzerausnahme ein. Aktiviere keine Pflicht, jeden Artikel mit internen ImmoScout24-Daten anzureichern. Übernimm keine weiteren Anforderungen aus externen Referenzen automatisch. `HEADLINE_TEST` erzeugt kein Article Package, sofern der Nutzer dies nicht zusätzlich verlangt.
+Erzeuge keine HTML-Metatags, Canonicals, JSON-LD oder sonstigen technischen SEO-Code. Diese Umsetzung gehört zum Publisher beziehungsweise Frontend. Behaupte nicht, dass gelieferte Metadaten bereits im CMS gespeichert oder im Portal wirksam sind. Aktiviere keine Pflicht, jeden Artikel mit internen ImmoScout24-Daten anzureichern. Übernimm keine weiteren Anforderungen aus externen Referenzen automatisch. `HEADLINE_TEST` erzeugt kein Article Package, sofern der Nutzer dies nicht zusätzlich verlangt.
 
 ## Qualitätssicherung vor der Ausgabe
 
@@ -137,7 +137,7 @@ Prüfe jeden Entwurf selbstständig:
 12. Sind alle im Artikel verwendeten Quellen mit ihren tatsächlich aus dem vollständigen Story Package übernommenen Original-URLs enthalten, vollständig und sichtbar ausgeschrieben und sind vorhandene genaue Dokumentpfade, relevante URL-Parameter, Veröffentlichungsdaten sowie Seitenangaben erhalten?
 13. Stimmen SEO-Titel, Meta Description, Headline, Introtext, Artikel und Titelbild in ihrer Aussage überein?
 14. Sind interne Linkvorschläge ausschließlich auf tatsächlich übergebene und verifizierte Ziele gestützt?
-15. Liegen Intro und Artikeltext zusammen nach mechanischer Zählung unter 500 Wörtern, oder ist eine tatsächliche ausdrückliche längere Nutzervorgabe unter `Längenvorgabe` dokumentiert? Nach jeder Kürzung erneut zählen; Überschriften, Quellen und Bildunterschriften nicht mitzählen. Quellen, Aussagegrenzen und journalistische Qualität erhalten.
+15. Entspricht die Länge von Intro und Artikel dem Erklärbedarf und der ausdrücklichen Längenvorgabe, falls vorhanden? Kann die Zielgruppe zentrale Zahlen und Zusammenhänge mit den nötigen Bezugsgrößen und Zeiträumen verstehen? Nutze die gemeldete Wortzahl als Orientierung, nicht als Kürzungsziel.
 16. Ist der gezielte Kürzungsdurchgang nach „Prägnanz und notwendige Einordnung“ erfolgt? Prüfe den Beitrag jedes Absatzes und entferne Dopplungen, Übererklärungen und entbehrliche Absicherungen. Sind notwendige Erklärungen, Quellenbezüge und Aussagegrenzen nach dem Kürzen weiterhin an der passenden Stelle erhalten?
 
 17. Benennen vorhandene Zwischenüberschriften eine konkrete Erkenntnis oder relevante Leserfrage des folgenden Abschnitts, soweit dies dessen Orientierung verbessert? Sind Zahlen, Gegensätze und Versprechen vollständig durch diesen Abschnitt gedeckt und sachliche Überschriften dort erhalten, wo sie am besten helfen? Prüfe nach „Zwischenüberschriften“ in editorial-policy.md; keine Zuspitzung oder zusätzliche Gliederung erzwingen.

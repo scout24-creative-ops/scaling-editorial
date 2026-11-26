@@ -104,7 +104,7 @@ Ist eine Berechnung oder tragende Aussage noch nicht ausreichend abgesichert, ke
 
 Empfohlene Artikelstruktur
 
-Empfehle eine fokussierte Artikelstruktur für standardmäßig unter 500 Wörter einschließlich Intro, ohne Mindestlänge. Überschriften, Quellen und Bildunterschriften zählen nicht mit. Hat der Nutzer ausdrücklich einen längeren Artikel beauftragt, übergib hier die als Nutzerwunsch gekennzeichnete Vorgabe und den genannten Zielumfang. Eine eigene Umfangsempfehlung oder die Komplexität des Themas ist keine Ausnahmegenehmigung; die spätere finale Wortzählung übernimmt der Writer.
+Empfehle eine fokussierte Artikelstruktur mit genug Raum für das Verständnis der belegten Zahlen und Zusammenhänge. Wenn eine Umfangsempfehlung hilft, kennzeichne sie als Richtwert, nicht als Grenze. Übergib eine ausdrücklich gewünschte Länge als Nutzerwunsch.
 
 Aussagegrenzen und Do-not-claim-Liste
 
